@@ -15,12 +15,12 @@ navigation:
  - title: Home
    url: /index.html
  - title: Projects
-   url: /project
+   url: /projects
  - title: CV
    url: /cv
 
 social:
-   github: sch8906
+   github: chunghaSung
    linkedin: sch8906
 
 google_analytics: "UA-58263416-1"
