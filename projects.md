@@ -17,7 +17,7 @@ analysis. Therefore, I could remove infeasible interference for interrupt-driven
 &nbsp;&nbsp;
 I compared our analysis to state-of-the-art techniques one of which is a thread-modular analysis for concurrent programs, and another is a model checking based interrupt-driven analysis tool, with about 35 C-base interrupt-driven programs. Finally, my tool showed its higher accuracy than other two tools with getting a little overhead.
 <br>
-&nbsp;&nbsp; Project link: <a href="https://github.com/chunghaSung/intabs">https://github.com/chunghaSung/intabs</a>
+&nbsp;&nbsp; Project link: <a href="https://github.com/chunghasung/intabs">https://github.com/chunghasung/intabs</a>
 </p>
 
 <h3>Extension of a Scope query optimization tool</h3>
@@ -31,7 +31,7 @@ Even though there were many approaches to analyze web applications, it was hard 
 <br>&nbsp;&nbsp;
 To show the usefulness of my work, I hooked up the automated testing tool named Artemis to shrink the searching space of it using POR (Partial Order Reduction) with the dependency information. I tested with about 20 real world JavaScript games which are highly user-driven events demanded programs, and the result shows that the overhead of this analysis is really negligible and we got about 16% improvement of code coverage in average.
 <br>&nbsp;&nbsp;
-Project link: <a href="https://github.com/chunghaSung/jsdep">https://github.com/chunghaSung/jsdep</a>
+Project link: <a href="https://github.com/chunghasung/jsdep">https://github.com/chunghasung/jsdep</a>
 </p>
 
 <h3>Interactive Visualization</h3>
