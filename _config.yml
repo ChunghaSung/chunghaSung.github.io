@@ -1,0 +1,26 @@
+title: Chungha
+description: Chungha's blog
+
+url: http://sch8906.github.io
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: Projects
+   url: /project
+ - title: CV
+   url: /cv
+
+social:
+   github: sch8906
+   linkedin: sch8906
+
+google_analytics: "UA-58263416-1"
