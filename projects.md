@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research & Work Experience
+title: project description
 ---
 
 <div class="post">

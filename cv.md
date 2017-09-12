@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research & Work Experience
+title: Curriculum Vitae
 ---
 
 <div class="post">
