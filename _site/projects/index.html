@@ -13,12 +13,12 @@
 
 
     <!-- Come and get me RSS readers -->
-    <link rel="alternate" type="application/rss+xml" title="Chungha Sung" href="http://sch8906.github.io/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Chungha Sung" href="http://localhost:4000/feed.xml" />
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie.css"><![endif]-->
-    <link rel="canonical" href="http://sch8906.github.io/projects/">
+    <link rel="canonical" href="http://localhost:4000/projects/">
 
     <!-- Modernizr -->
     <script src="/assets/js/modernizr.custom.15390.js" type="text/javascript"></script>
@@ -67,8 +67,19 @@ ga('send', 'pageview');
    <div class="content">
       <div class="container">
          <div class="post">
+    <h3> List of projects </h3>
+    <ul>
+        <li><a href="#intAbs">Modular Verification of Interrupt-driven software</a></li>
+        <li><a href="#msrIntern">Extension of a Scope query optimiztion tool</a></li>
+        <li><a href="#jsdep">Optimization of testing web applications</a></li>
+        <li><a href="#right">Interactive Visualization</a></li>
+        <li><a href="#ahnlabIntern">Development of Boot loader sequence</a></li>
+    </ul>
+</div>
 
-<h3>Modular verification of Interrupt-driven programs</h3>
+<div class="post">
+<a name="intAbs"></a>
+<h3>Modular Verification of Interrupt-driven software</h3>
 <p> &nbsp; &nbsp;Since there has been relatively lack of verification 
 methods for interrupt-driven programs even the behavior of interrupts is similar with that of threads, we introduced a more accurate verification 
 method for interrupt-driven programs by leveraging a thread-modular 
@@ -83,11 +94,13 @@ I compared our analysis to state-of-the-art techniques one of which is a thread-
 &nbsp;&nbsp; Project link: <a href="https://github.com/chunghasung/intabs">https://github.com/chunghasung/intabs</a>
 </p>
 
+<a name="msrIntern"></a>
 <h3>Extension of a Scope query optimization tool</h3>
 <p>&nbsp;&nbsp;
 During the internship at MSR, I extended a scope query optimization tool. The tool consists of two parts: one part is parser and another part is template generation. Basically, it parses a query file and then prints a C-style code template, and the template is fed into a programming synthesis tool to optimize it. Then, the optimized C-style program is translated into an optimized query. However, the tool only supported a small set of queries because many queries use many combinations of columns and uninterpreted functions. So, I changed more than half of the tool, both parser and template generation parts, to support various combinations of columns and uninterpreted functions. To achieve this, I got used to F#, C# and Scope query.
 </p>
 
+<a name="jsdep"></a>
 <h3>Optimization of testing web applications</h3>
 <p>&nbsp;&nbsp;
 Even though there were many approaches to analyze web applications, it was hard to analyze them accurately due to its inherent characteristic of user-driven events using the DOM (Document Object Model). This project tries to model the DOMs to find out dependencies between two events which are attached to the DOMs. To achieve this, I made a JavaScript parser from the scratch using JavaScript and nodejs, and modified JS_WALA to build a CFG (Control Flow Graph). Based on the CFG, translated datalog facts are printed. My analysis is inter-procedural and flow-insensitive pointer analysis. Finally, from the facts I got and the rules I made, I can figure out the dependencies among all events over-approximately.
@@ -97,12 +110,14 @@ To show the usefulness of my work, I hooked up the automated testing tool named 
 Project link: <a href="https://github.com/chunghasung/jsdep">https://github.com/chunghasung/jsdep</a>
 </p>
 
+<a name="right"></a>
 <h3>Interactive Visualization</h3>
 <p>&nbsp;&nbsp;
 Our team developed an interactive visualization graphic package as an open source in R project during the Google summer of Code 2013 period to help people easily deal with various aspects of data by inserting new data or deleting outliers while watching the graphs. To support these features easily our team used the browser to show the graph using HTML and JavaScript. The advantage of using the browser to support the graphic package is people can easily use this package on the various platforms such as mobile devices. Furthermore, we try to support server-side offload using the package named Shiny with the large number of data which are hard to compute at the client-side platform. 
 <br />&nbsp;&nbsp;
 Project link: <a href="https://righthelp.github.io/tutorial/overview">https://righthelp.github.io/tutorial/overview</a>
 
+<a name="ahnlabIntern"></a>
 <h3>Development of Boot loader sequence</h3>
 <p>&nbsp;&nbsp;
 When I was at AhnLab, I worked on prototyping new boot loader for an appliance that should be compatible with x86/MIPS architecture and Linux-based operating systems and simplified customer support and troubleshooting, ensuring that the boot loader would provide multi-level booting, securing the system to protect not only back side information, but customers’ information as well.
