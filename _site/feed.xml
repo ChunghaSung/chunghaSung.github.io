@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chungha</title>
-    <description>Chungha's blog</description>
+    <title>Chungha Sung</title>
+    <description>Chungha's website</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Sep 2017 02:17:50 -0700</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2017 02:17:50 -0700</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2017 15:39:40 -0400</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2017 15:39:40 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       
@@ -77,7 +77,7 @@
 
 </description>
         
-        <pubDate>Mon, 15 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Mon, 15 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/example-post-formatting/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/example-post-formatting/</guid>
         
@@ -105,7 +105,7 @@
 
 </description>
         
-        <pubDate>Sun, 14 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sun, 14 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/featured-image/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/featured-image/</guid>
         
@@ -134,7 +134,7 @@
 
 </description>
         
-        <pubDate>Sat, 13 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Sat, 13 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/code-snippet/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/code-snippet/</guid>
         
@@ -172,7 +172,7 @@
 
 </description>
         
-        <pubDate>Fri, 12 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Fri, 12 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/figure-with-caption/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/figure-with-caption/</guid>
         
@@ -202,7 +202,7 @@
 
 </description>
         
-        <pubDate>Thu, 11 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Thu, 11 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/image-in-post/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/image-in-post/</guid>
         
@@ -230,7 +230,7 @@
 
 </description>
         
-        <pubDate>Wed, 10 Dec 2014 00:00:00 -0800</pubDate>
+        <pubDate>Wed, 10 Dec 2014 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/blog/test-post/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/test-post/</guid>
         

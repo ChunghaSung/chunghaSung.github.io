@@ -1,0 +1,14 @@
+
+To run the site
+- bundle exec jekyll serve
+
+To build the site again
+- bundle exec jekyll build
+
+Jekyll in the labtop cannot build new css correctly. It should be updated.
+
+Also mobile version is not changed. I guess it is because of Jekyll error.
+
+
+
+

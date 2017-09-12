@@ -1,5 +1,5 @@
-title: Chungha
-description: Chungha's blog
+title: Chungha Sung
+description: Chungha's Website
 
 url: http://sch8906.github.io
 baseurl: ""
@@ -20,7 +20,7 @@ navigation:
    url: /cv
 
 social:
-   github: chunghaSung
+   github: ChunghaSung
    linkedin: sch8906
 
 google_analytics: "UA-58263416-1"

@@ -33,7 +33,7 @@ title: Curriculum Vitae
 </td>
 </tr>
 <tr>
-<td><b><i>Mar. 2007 - Aug. 2013</i></b></td>
+<td align="center"><b><i>Mar. 2007 - Aug. 2013</i></b></td>
 <td>
     <b>Sung Kyun Kwan University (SKKU)</b><br>
     <i>Seoul, Korea<br></i>
@@ -43,7 +43,7 @@ title: Curriculum Vitae
 </td>
 </tr>
 <tr>
-<td><b><i>Mar. 2005 - Feb. 2007</i></b></td>
+<td align="center"><b><i>Mar. 2005 - Feb. 2007</i></b></td>
 <td>
     <b>Gangwon Science High School</b><br>
     <i>Wonju-si, Gangwon-do, Korea</i><br>
