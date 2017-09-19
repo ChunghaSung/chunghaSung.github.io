@@ -34,7 +34,7 @@ I compared our analysis to state-of-the-art techniques one of which is a thread-
 <a name="msrIntern"></a>
 <h3>Extension of a Scope query optimization tool</h3>
 <p>&nbsp;&nbsp;
-During the internship at MSR, I extended a scope query optimization tool. The tool consists of two parts: one part is parser and another part is template generation. Basically, it parses a query file and then prints a C-style code template, and the template is fed into a programming synthesis tool to optimize it. Then, the optimized C-style program is translated into an optimized query. However, the tool only supported a small set of queries because many queries use many combinations of columns and uninterpreted functions. So, I changed more than half of the tool, both parser and template generation parts, to support various combinations of columns and uninterpreted functions. To achieve this, I got used to F#, C# and Scope query.
+During the internship at MSR, I extended a scope query optimization tool. The tool consists of two parts: one part is parser and another part is template generation. Basically, it parses a query file and then prints a C-style code template, and the template is fed into a programming synthesis tool to optimize it. Then, the optimized C-style program is translated into an optimized query. However, the tool only supported a small set of queries because many queries use many combinations of columns and uninterpreted functions. So, I have changed both parser and template generation parts. To achieve this, I got used to F#, C# and Scope query.
 </p>
 
 <a name="jsdep"></a>
