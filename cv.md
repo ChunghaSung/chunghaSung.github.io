@@ -47,7 +47,7 @@ title: Curriculum Vitae
 <td>
     <b>Gangwon Science High School</b><br>
     <i>Wonju-si, Gangwon-do, Korea</i><br>
-    <b>- Grade skipping and early graduation (1 year)</b>><br>
+    <b>- Grade skipping and early graduation (1 year)</b><br>
 </td>
 </tr>
 </tbody>
@@ -91,7 +91,7 @@ title: Curriculum Vitae
 <td align="center"><b><i>Mar. 2013 - June. 2014<br></i></b></td>
 <td>
     <b>Undergrad Researcher in Parallel Architecture and Programming Lab (PAPL), SKKU</b><br>
-    &nbsp;- Implemented and developed a graphical visualization program</font>
+    &nbsp;- Implemented and developed a graphical visualization program
 </td>
 </tr>
 <tr>
@@ -150,7 +150,7 @@ title: Curriculum Vitae
 <td align="center"><b><i>Apr. 2012</i></b></td>
 <td>
     <b>Dean's List award from SKKU</b><br>
-    &nbsp;- for top 5% students in one semester</font>
+    &nbsp;- for top 5% students in one semester
 </td>
 </tr>
 <tr>
