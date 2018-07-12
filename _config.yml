@@ -9,13 +9,15 @@ permalink: blog/:title/
 markdown: kramdown
 highlighter: rouge
 gems: [jekyll-paginate]
-paginate: 5
+paginate: 6
 
 navigation:
  - title: Home
    url: /index.html
- - title: Projects
-   url: /projects
+ - title: Publications
+   url: /pub
+ - title: Work
+   url: /work
  - title: CV
    url: /cv
 

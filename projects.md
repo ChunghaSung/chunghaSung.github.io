@@ -1,11 +1,13 @@
 ---
 layout: default
-title: project description
+title: project
 ---
 
 <div class="post">
     <h3> List of projects </h3>
     <ul>
+        <li><a href="#ecdiff">Datalog-based Scalable Semantic Diffing of Concurrent Programs</a></li>
+        <li><a href="#canal">CANAL: A Cache Timing Analysis Framework via LLVM Transformation</a></li>
         <li><a href="#intAbs">Modular Verification of Interrupt-driven software</a></li>
         <li><a href="#msrIntern">Extension of a Scope query optimiztion tool</a></li>
         <li><a href="#jsdep">Optimization of testing web applications</a></li>
@@ -15,6 +17,55 @@ title: project description
 </div>
 
 <div class="post">
+
+<a name="ecdiff"></a>
+<h3>Datalog-based Scalable Semantic Diffing of Concurrent Programs</h3>
+<p>&nbsp;&nbsp;
+When an evolving program is modified to address issues related
+to thread synchronization, there is a need to confirm the change
+is correct, i.e., it does not introduce unexpected behavior. However,
+manually comparing two programs to identify the semantic
+difference is labor intensive and error prone, whereas techniques
+based on model checking are computationally expensive. To fill the
+gap, we develop a fast and approximate static analysis for computing
+synchronization differences of two programs. The method is
+fast because, instead of relying on heavy-weight model checking
+techniques, it leverages a polynomial-time Datalog-based program
+analysis framework to compute differentiating data-flow edges, i.e.,
+edges allowed by one program but not the other. Although approximation
+is used our method is sufficiently accurate due to careful
+design of the Datalog inference rules and iterative increase of the
+required data-flow edges for representing a difference. We have
+implemented our method and evaluated it on a large number of
+multithreaded C programs to confirm its ability to produce, often
+within seconds, the same differences obtained by human; in contrast,
+prior techniques based on model checking take minutes or
+even hours and thus can be 10x to 1000x slower.
+<br>
+&nbsp;&nbsp; Project link: <a href="https://github.com/chunghasung/EC-Diff">https://github.com/ChunghaSung/EC-Diff</a>
+</p>
+
+<a name="canal"></a>
+<h3>CANAL: A Cache Timing Analysis Framework via LLVM Transformation</h3>
+<p>&nbsp;&nbsp;
+A unified modeling framework for non-functional properties of a
+program is essential for research in software analysis and verification,
+since it reduces burdens on individual researchers to implement
+new approaches and compare existing approaches. We
+present CANAL, a framework that models the cache behaviors of
+a program by transforming its intermediate representation in the
+LLVM compiler. CANAL inserts auxiliary variables and instructions
+over these variables, to allow standard verification tools to handle
+a new class of cache related properties, e.g., for computing the
+worst-case execution time and detecting side-channel leaks. We
+demonstrate the effectiveness of CANAL using three verification
+tools: KLEE, SMACK and Crab-llvm. We confirm the accuracy of
+our cache model by comparing with CPU cycle-accurate simulation
+results of GEM5.
+<br>
+&nbsp;&nbsp; Project link: <a href="https://github.com/canalcache/canal">https://github.com/canalcache/canal</a>
+</p>
+
 <a name="intAbs"></a>
 <h3>Modular Verification of Interrupt-driven software</h3>
 <p> &nbsp; &nbsp;Since there has been relatively lack of verification 
@@ -34,7 +85,14 @@ I compared our analysis to state-of-the-art techniques one of which is a thread-
 <a name="msrIntern"></a>
 <h3>Extension of a Scope query optimization tool</h3>
 <p>&nbsp;&nbsp;
-During the internship at MSR, I extended a scope query optimization tool. The tool consists of two parts: one part is parser and another part is template generation. Basically, it parses a query file and then prints a C-style code template, and the template is fed into a programming synthesis tool to optimize it. Then, the optimized C-style program is translated into an optimized query. However, the tool only supported a small set of queries because many queries use many combinations of columns and uninterpreted functions. So, I have changed both parser and template generation parts. To achieve this, I got used to F#, C# and Scope query.
+During the internship at MSR, I extended a scope query optimization tool. 
+The tool consists of two parts: one part is parser and another part is template generation. 
+Basically, it parses a query file and then prints a C-style code template, 
+and the template is fed into a programming synthesis tool to optimize it. 
+Then, the optimized C-style program is translated into an optimized query. 
+However, the tool only supported a small set of queries because many queries 
+use many combinations of columns and uninterpreted functions. So, I have 
+changed both parser and template generation parts. To achieve this, I got used to F#, C# and Scope query.
 </p>
 
 <a name="jsdep"></a>

@@ -66,9 +66,17 @@ title: Curriculum Vitae
 </td>
 </tr>
 <tr>
+<td align="center"><b><i>May. 2018 - Aug. 2018<br></i></b></td>
+<td>
+    <b>Compiler team Internship at Media Teck, Inc (MA, USA)</b><br>
+    &nbsp;- Manager: Dr. Henry Cox
+</td>
+</tr>
+<tr>
 <td align="center"><b><i>May. 2017 - Aug. 2017<br></i></b></td>
 <td>
     <b>Research Internship at Microsoft Research in India</b><br>
+    &nbsp;- Manager: Akash Lal <br>
     &nbsp;- Extended a Scope query optimization tool to support more queries such as queries which have uninterpreted functions
 </td>
 </tr>
