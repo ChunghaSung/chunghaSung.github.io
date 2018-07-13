@@ -8,7 +8,7 @@ title: publications
     <span><u><i>Conference or Journal</i></u></span>
     </li>
         <ul>
-                <br>
+            <br>
             <li>
                 <span><b>Datalog-based Scalable Semantic Diffing of Concurrent Programs </b></span>
                 <br>
