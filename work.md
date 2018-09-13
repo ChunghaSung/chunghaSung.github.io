@@ -20,6 +20,7 @@ title: work experience
 - <b>Instruction Constraint Verifier</b>: 
 I worked on building a SMT-based constraints verifier for instruction-set under various architectures.
 Broadly, I focused on checking the inconsistency of constraints written by designers.
+<br>&nbsp;&nbsp;
 - <b>Integration of Fuzz-testing</b>:
 This is not a complete project, but I tried to integrate fuzz-testing into a testing process for 
 insturction implementations.

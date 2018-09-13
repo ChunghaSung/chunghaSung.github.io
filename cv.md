@@ -69,9 +69,9 @@ title: Curriculum Vitae
 <td align="center"><b><i>May. 2018 - Aug. 2018<br></i></b></td>
 <td>
     <b>Compiler team Internship at Media Teck, Inc (MA, USA)</b><br>
-    &nbsp;- Manager: Dr. Henry Cox
-    &nbsp;- Built a constraint-based instruction-set verifier for various architectures
-    &nbsp;- Integrated a fuzz-testing system for instruction-set firmware implementations
+    &nbsp;- Manager: Dr. Henry Cox <br>
+    &nbsp;- Built a constraint-based instruction-set verifier for various architectures <br>
+    &nbsp;- Integrated a fuzz-testing system for instruction-set firmware implementations <br>
 </td>
 </tr>
 <tr>
