@@ -1,3 +1,5 @@
+Installations.
+- https://jekyllrb.com/docs/installation/ubuntu/
 
 To run the site
 - bundle exec jekyll serve

@@ -70,13 +70,15 @@ title: Curriculum Vitae
 <td>
     <b>Compiler team Internship at Media Teck, Inc (MA, USA)</b><br>
     &nbsp;- Manager: Dr. Henry Cox
+    &nbsp;- Built a constraint-based instruction-set verifier for various architectures
+    &nbsp;- Integrated a fuzz-testing system for instruction-set firmware implementations
 </td>
 </tr>
 <tr>
 <td align="center"><b><i>May. 2017 - Aug. 2017<br></i></b></td>
 <td>
     <b>Research Internship at Microsoft Research in India</b><br>
-    &nbsp;- Manager: Akash Lal <br>
+    &nbsp;- Manager: Dr. Akash Lal <br>
     &nbsp;- Extended a Scope query optimization tool to support more queries such as queries which have uninterpreted functions
 </td>
 </tr>

@@ -18,7 +18,11 @@ title: work experience
 <h4>MediaTeck Inc., USA (Summer 2018)</h4>
 <p>&nbsp;&nbsp;
 - <b>Instruction Constraint Verifier</b>: 
-Under construction..
+I worked on building a SMT-based constraints verifier for instruction-set under various architectures.
+Broadly, I focused on checking the inconsistency of constraints written by designers.
+- <b>Integration of Fuzz-testing</b>:
+This is not a complete project, but I tried to integrate fuzz-testing into a testing process for 
+insturction implementations.
 </p>
 
 <a name="msrIntern"></a>

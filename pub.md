@@ -20,7 +20,7 @@ title: publications
                 (
                     <a href="papers/ase2018_diff.pdf" target="_blank">PDF</a>,
                     <a href="https://github.com/ChunghaSung/EC-Diff" target="_blank">Artifact</a>, 
-                    Slides
+                    <a href="slides/ase2018_ecdiff_slide.pdf" target="_blank">Slides</a>
                 )
                 </font>
                 <br>
@@ -38,7 +38,7 @@ title: publications
                     <a href="papers/ase2018_canal.pdf" target="_blank">PDF</a>, 
                     <a href="https://github.com/canalcache/canal" target="_blank">Artifact</a>, 
                     <a href="https://youtu.be/JDou3F1j2nY" target="_blank">Video</a>, 
-                    Slides
+                    <a href="slides/ase2018_canal_slide.pdf" target="_blank">Slides</a>
                 )
                 </font>
             </li>
