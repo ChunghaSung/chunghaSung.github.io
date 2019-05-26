@@ -1,16 +1,25 @@
 Installations.
 - https://jekyllrb.com/docs/installation/ubuntu/
 
-To run the site
+## After clone the repo
+-`bundle install`
+-`npm install`
+- All should be installed all packages correctly to re-build the site
+
+## To update CSS
+- To run gulp locally, 
+    type `bundle exec gulp [command]`
+- For commands, please check ``gulpfile.js`` file.
+- Exmaple
+    `bundle exec gulp jekyll-build` to build jekyll site
+
+## To run the site with jekyll
 - bundle exec jekyll serve
 
-To build the site again
-- bundle exec jekyll build
 
-Jekyll in the labtop cannot build new css correctly. It should be updated.
 
-Also mobile version is not changed. I guess it is because of Jekyll error.
-
+## To update css
+ change files in assets/scss
 
 
 

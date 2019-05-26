@@ -13,12 +13,12 @@
 
 
     <!-- Come and get me RSS readers -->
-    <link rel="alternate" type="application/rss+xml" title="Chungha Sung" href="http://localhost:4000/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Chungha Sung" href="http://www.chunghasung.org/feed.xml" />
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie.css"><![endif]-->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://www.chunghasung.org/">
 
     <!-- Modernizr -->
     <script src="/assets/js/modernizr.custom.15390.js" type="text/javascript"></script>
@@ -46,20 +46,20 @@ ga('send', 'pageview');
          <nav class="nav-collapse">
              <ul class="noList">
                  
-                 <li class="element first  ">
-                     <a href="/index.html"><font size="5">Home</font></a>
+                 <li class="element first current ">
+                     <a href="/"><font size="5">Home</font></a>
                  </li> 
                  
                  <li class="element   ">
-                     <a href="/pub"><font size="5">Publications</font></a>
+                     <a href="/pub/"><font size="5">Publications</font></a>
                  </li> 
                  
                  <li class="element   ">
-                     <a href="/work"><font size="5">Work</font></a>
+                     <a href="/work/"><font size="5">Work</font></a>
                  </li> 
                  
                  <li class="element   last">
-                     <a href="/cv"><font size="5">CV</font></a>
+                     <a href="/cv/"><font size="5">CV</font></a>
                  </li> 
                  
              </ul>
@@ -72,12 +72,13 @@ ga('send', 'pageview');
       <div class="container">
          <div class="home" id="home">
 
-    <div><a href="assets/img/home_image.jpg" imageanchor="1"><img border="0" height="240"  style="float:left" hspace="30" src="assets/img/home_image.jpg"/></a>
+    <div><a href="assets/img/profile.jpeg" imageanchor="1"><img border="0" height="240"  style="float:left" hspace="30" src="assets/img/profile.jpeg"/></a>
 
-        <h3>Chungha Sung</h3>
+        <h3 style="margin: 0.5rem 1.5rem">Chungha Sung </h3>
+        <h4><span lang="ko">(성청하</span>,<span lang="ch"> 成青河</span>)</h4>
         <p class="body">&nbsp;&nbsp;Research Assistant<br>
         &nbsp;&nbsp;<a href="https://www.cs.usc.edu" target="_blank">The department of Computer Science</a><br>
-        &nbsp;&nbsp;<a href="https://www.usc.edu" target="_blank">University of Southern California</a></p>
+        &nbsp;&nbsp;<a href="https://www.usc.edu" target="_blank">University of Southern California (USC)</a></p>
     </div>
     <p style="clear:both">
 
@@ -86,21 +87,46 @@ ga('send', 'pageview');
 &nbsp;&nbsp;
         I am currently pursuing Ph.D degree in the Department of Computer Science 
         at University of Southern California (USC) under the guidance of 
-        <a href="http://www-bcf.usc.edu/~wang626/" target="_blank">Prof. Chao Wang</a>.
-        Before joining USC, I received my M.S. from <a href="https://www.vt.edu" target="_blank">Virginia Tech</a>, 
+        <a href="https://sites.usc.edu/chaowang/" target="_blank">Prof. Chao Wang</a>.
+        Before joining USC, I received my M.S. from <a href="https://www.vt.edu" target="_blank">Virginia Tech</a> in 2016,
         and B.S. from <a href="https://www.skku.edu" target="_blank">Sung Kyun Kwan University (SKKU)</a> 
         advised by <a href="https://cse.snu.ac.kr/en/professor/jae-wook-lee" target="_blank">Prof. Jae W. Lee</a>.<br>
     <br>
     </div>
    </table>
     <table cellspacing="0">
-    <h4> Research Interests</h4>
-        <li>Programing analysis and verification</li>
-        <li>Optimizing Verification of concurrent programs</li>
-        <li>Static programming analysis of event-based programs and multi-threaded programs</li>
-        <br>
+    <ul> <li class="ch-list1">Research Interests</li>
+        <ul>
+        <li class="ch-list2">Program analysis and testing/verification on cocurrent software and event-driven programs such as web/mobile applications</li>
+        <li class="ch-list2">Program maintenance/repair and side-channel attack</li>
+        </ul>
+    </ul>
    </table>
 
+    <table cellspacing="0">
+    <ul> <li class="ch-list1">Brief list of Publications 
+        <span style="font-size:0.9em; font-weight:light">
+        (<a href="pub/">full list</a>, <a href="https://scholar.google.com/citations?user=ZCD9fDsAAAAJ&hl=en" target="_blank">goolge scholar</a>)</span></li>
+        <ul>
+
+            <li class="ch-list2">(FSE 2019) Mitigating Power Side Channels during Compilation</li>
+            <li class="ch-list2" >(ASE 2018) Datalog-based Scalable Semantic Diffing of Concurrent Programs</li>
+            <li class="ch-list2">(ASE 2018) CANAL: A Cache Timing Analysis Framework via LLVM Transformation</li>
+            <li class="ch-list2">(ASE 2017) Modular Verification of Interrupt-driven Software</li>
+            <li class="ch-list2">(FSE 2016) Static DOM Event Analysis for Testing Web Applications</li>
+        </ul>
+    </ul>
+   </table>
+
+    <ul> <li class="ch-list1">Internships</li>
+        <ul>
+        <li class="ch-list2">Microsoft Research, Redmond (Summer 2019)</li>
+        <li class="ch-list2">MediaTek Inc., Boston (Summer 2018)</li>
+        <li class="ch-list2">Microsoft Research, India (Summer 2017)</li>
+        <li class="ch-list2">AhnLab Inc., Korea (Summer 2012)</li>
+        </ul>
+    </ul>
+    <br>
 
 
 </div>
@@ -151,6 +177,16 @@ ga('send', 'pageview');
 <script src="/assets/js/scripts.js"></script>
 
 
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140863215-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140863215-1');
+</script>
 </body>
+
 
 </html>

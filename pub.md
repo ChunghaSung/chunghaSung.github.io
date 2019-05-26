@@ -2,88 +2,72 @@
 layout: default
 title: publications
 ---
-<div>
-    <h4> Publications </h4>
-    <ul><li>
-    <span><u><i>Conference or Journal</i></u></span>
+<div class="chungha-pub">
+    <ul>
+    <li>
+    <span><u>Conference or Journal</u></span>
     </li>
         <ul>
-            <br>
+
             <li>
-                <span><b>Datalog-based Scalable Semantic Diffing of Concurrent Programs </b></span>
-                <br>
-                <font size="3"><b>Chungha Sung</b>, Shuvendu Lahiri, Constantin Enea, Chao Wang</font>
-                <br>
-                <font size="3">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Corum, Montpellier, France, Sep 2018</font>
-                <br>
-                <font size="3">
+                <span class="paper-title">Mitigating Power Side Channels during Compilation (To appear)</span>
+                <span class="paper-etc">Jingbo Wang, <b>Chungha Sung</b>, Chao Wang</span>
+                <span class="paper-etc">The 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (<b>ESEC/FSE</b>), Tallinn, Estonia, Aug 2019</span>
+            </li>
+
+            <li>
+                <span class="paper-title">Datalog-based Scalable Semantic Diffing of Concurrent Programs
                 (
                     <a href="papers/ase2018_diff.pdf" target="_blank">PDF</a>,
                     <a href="https://github.com/ChunghaSung/EC-Diff" target="_blank">Artifact</a>, 
                     <a href="slides/ase2018_ecdiff_slide.pdf" target="_blank">Slides</a>
                 )
-                </font>
-                <br>
+                </span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Constantin Enea, Chao Wang</span>
+                <span class="paper-etc">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Corum, Montpellier, France, Sep 2018</span>
             </li>
-                <br>
             <li>
-                <span><b>CANAL: A Cache Timing Analysis Framework via LLVM Transformation </b></span>
-                <br>
-                <font size="3"><b>Chungha Sung</b>, Brandon Paulsen, Chao Wang</font>
-                <br>
-                <font size="3">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b> <i>Tool Demo Track</i>), Corum, Montpellier, France, Sep 2018</font>
-                <br>
-                <font size="3">
+                <span class="paper-title">CANAL: A Cache Timing Analysis Framework via LLVM Transformation
                 (
                     <a href="papers/ase2018_canal.pdf" target="_blank">PDF</a>, 
                     <a href="https://github.com/canalcache/canal" target="_blank">Artifact</a>, 
                     <a href="https://youtu.be/JDou3F1j2nY" target="_blank">Video</a>, 
                     <a href="slides/ase2018_canal_slide.pdf" target="_blank">Slides</a>
                 )
-                </font>
+                </span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Brandon Paulsen, Chao Wang</span>
+                <span class="paper-etc">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b> <i>Tool Demo Track</i>), Corum, Montpellier, France, Sep 2018</span>
             </li>
-                <br>
             <li>
-                <span><b>Modular Verification of Interrupt-driven Software </b></span>
-                <br>
-                <font size="3"><b>Chungha Sung</b>, Markus Kusano, Chao Wang</font>
-                <br>
-                <font size="3">The 32nd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Champaign, Illinois, USA, Oct 2017</font>
-                <br>
-                <font size="3">
+                <span class="paper-title">Modular Verification of Interrupt-driven Software
                 (
                     <a href="papers/ase17_paper.pdf" target="_blank">PDF</a>, 
                     <a href="https://github.com/ChunghaSung/intAbs" target="_blank">Artifact</a>,
                     <a href="slides/ase17_slide.pdf" target="_blank">Slides</a>
                 )
-                </font>
+                </span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Markus Kusano, Chao Wang</span>
+                <span class="paper-etc">The 32nd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Champaign, Illinois, USA, Oct 2017</span>
             </li>
-                <br>
+
             <li>
-                <span><b>Static DOM Event Dependency Analysis for Testing Web Applications </b></span>
-                <br>
-                <font size="3"><b>Chungha Sung</b>, Markus Kusano, Nishant Sinha, Chao Wang</font>
-                <br>
-                <font size="3">The 24th ACM SIGSOFT International Symposium on the Foundations of Software Engineering (<b>FSE</b>), Seattle, Washington, USA, Nov 2016</font>
-                <br>
-                <font size="3">
+                <span class="paper-title">Static DOM Event Dependency Analysis for Testing Web Applications
                 (
                     <a href="papers/fse16_paper.pdf" target="_blank">PDF</a>, 
                     <a href="https://github.com/ChunghaSung/JSdep" target="_blank">Artifact</a>,
                     <a href="slides/fse16_slide.pdf" target="_blank">Slides</a>
                 )
-                </font>
+                </span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Markus Kusano, Nishant Sinha, Chao Wang</span>
+                <span class="paper-etc">The 24th ACM SIGSOFT International Symposium on the Foundations of Software Engineering (<b>FSE</b>), Seattle, Washington, USA, Nov 2016</span>
             </li>
         </ul>
-        <li><span><u><i>Posters</i></u></span></li>
-                <br>
-        <ul><li><span><b>RIGHT: an HTML canvas and JavaScript-based interactive data visualization package for linked graphics</b></span>
-            <br>
-            <font size="3"><b>ChungHa Sung</b>, TaeJoon Song, Jae W. Lee, and Junghoon Lee</font>
-            <br>
-            <font size="3">The R User Conference (UseR), UCLA, Los Angeles, California, July 2014</font>
-            <br>
-            <font size="3"> (<a href="papers/user14_abstract.pdf" target="_blank">Abstract</a>)</font>
+        <li><span><u>Posters</u></span></li>
+        <ul>
+            <li>
+                <span class="paper-title">RIGHT: an HTML canvas and JavaScript-based interactive data visualization package for linked graphics (<a href="papers/user14_abstract.pdf" target="_blank">Abstract</a>)</span>
+                <span class="paper-etc"><b>ChungHa Sung</b>, TaeJoon Song, Jae W. Lee, and Junghoon Lee</span>
+                <span class="paper-etc">The R User Conference (UseR), UCLA, Los Angeles, California, July 2014</span>
 
 <br>
 </li></ul></ul>

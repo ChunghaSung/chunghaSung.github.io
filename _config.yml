@@ -13,13 +13,13 @@ paginate: 6
 
 navigation:
  - title: Home
-   url: /index.html
+   url: /
  - title: Publications
-   url: /pub
+   url: /pub/
  - title: Work
-   url: /work
+   url: /work/
  - title: CV
-   url: /cv
+   url: /cv/
 
 social:
    github: chunghasung

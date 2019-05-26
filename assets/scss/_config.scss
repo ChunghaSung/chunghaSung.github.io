@@ -7,8 +7,8 @@ COLOR VARIABLES
 $aqua:  #7FDBFF;
 $blue:  #002DB3;
 $hoverblue: #06366E;
-#00134d
-#00061a
+//#00134d
+//#00061a
 $navy:  #001F3F;
 $teal:  #39CCCC;
 $green: #2ECC40;
@@ -28,7 +28,7 @@ $grey:   #aaa;
 $black:  #111;
 
 // Color variables
-$primary-color: seagreen;
+$primary-color: navy;
 $secondary-color: #233E5B;
 $tertiary-color: #aaa;
 $link-color: $primary-color;
@@ -57,3 +57,5 @@ TYPE SETTINGS
 
 $sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 $serif: "PT Serif", Georgia, Times, serif;
+//$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif

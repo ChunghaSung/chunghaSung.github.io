@@ -26,7 +26,7 @@ body {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: .5rem 0 1.5rem;
-  font-family: $sans-serif;
+  font-family: $helvetica;
 }
 
 // Headings
@@ -109,4 +109,50 @@ blockquote {
     font-size: 1.5em; // 24px / 16px
     line-height: 1.45833333; // 35px / 24px
   }
+}
+
+/*********************
+  CUSTOMIZED STYLING
+  ********************/
+.chungha-pub li {
+  padding-bottom: 14px;
+}
+
+.chungha-pub {
+  line-height: 1.2;
+}
+
+.paper-title {
+  font-size: 0.9em;
+  font-weight: bold; 
+}
+
+.paper-title-main:after {
+  content: '\A';
+  white-space: pre;
+}
+
+.paper-title:after {
+  content: '\A';
+  white-space: pre;
+}
+
+.paper-etc {
+  font-size: 0.75em;
+}
+
+.paper-etc:after {
+  content: '\A';
+  white-space: pre;
+}
+
+.ch-list1 {
+  padding-bottom: 12px;
+  font-size: 1.0em;
+  font-weight: bold; 
+}
+
+.ch-list2 {
+  padding-bottom: 10px;
+  font-size: 0.9em;
 }
