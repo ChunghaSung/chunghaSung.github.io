@@ -68,7 +68,8 @@ HEADER STYLING
 		font-size: 2em;
 		line-height: 1;
 		letter-spacing: -3px;
-		padding-left: 0;
+		padding-left: 5px;
+        padding-bottom: 5px;
 	}
 
 	nav {
@@ -96,6 +97,7 @@ HEADER STYLING
 				}
 
 				&.current {
+                    font-weight: bold;
 					padding-bottom: .25em;
 					border-bottom: 4px solid rgba(255,255,255,.4); 
 				}
