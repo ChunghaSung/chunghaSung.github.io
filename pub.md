@@ -8,9 +8,22 @@ title: publications
     <span><u>Conference or Journal</u></span>
     </li>
         <ul>
+            <li>
+                <span class="paper-title">Debreach: Mitigating Compression Side Channels via Static Analysis and Transformation 
+                (
+                    To appear
+                )
+                </span>
+                <span class="paper-etc">Brandon Paulsen, <b>Chungha Sung</b>, Peter Peterson, Chao Wang</span>
+                <span class="paper-etc">The 34th IEEE/ACM Inter International Conference on Automated Software Engineering (<b>ASE</b>), San Diego, California, USA, Nov 2019</span>
+            </li>
 
             <li>
-                <span class="paper-title">Mitigating Power Side Channels during Compilation (To appear)</span>
+                <span class="paper-title">Mitigating Power Side Channels during Compilation 
+                (
+                    <a href="papers/fse2019_paper.pdf" target="_blank">PDF</a>
+                )
+                </span>
                 <span class="paper-etc">Jingbo Wang, <b>Chungha Sung</b>, Chao Wang</span>
                 <span class="paper-etc">The 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (<b>ESEC/FSE</b>), Tallinn, Estonia, Aug 2019</span>
             </li>
