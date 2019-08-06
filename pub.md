@@ -15,7 +15,7 @@ title: publications
                 )
                 </span>
                 <span class="paper-etc">Brandon Paulsen, <b>Chungha Sung</b>, Peter Peterson, Chao Wang</span>
-                <span class="paper-etc">The 34th IEEE/ACM Inter International Conference on Automated Software Engineering (<b>ASE</b>), San Diego, California, USA, Nov 2019</span>
+                <span class="paper-etc">The 34th IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), San Diego, California, USA, Nov 2019</span>
             </li>
 
             <li>
