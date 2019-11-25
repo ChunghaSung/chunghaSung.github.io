@@ -27,7 +27,7 @@ insturction implementations.
 </p>
 
 <a name="msrIntern"></a>
-<h4>Micorsoft Research (Summer 2017)</h4>
+<h4>Microsoft Research (Summer 2017)</h4>
 <p>&nbsp;&nbsp;
 - <b>Extension of a Scope query optimization tool</b>:
 During the internship at MSR, I extended a scope query optimization tool. 

@@ -11,7 +11,7 @@ title: publications
             <li>
                 <span class="paper-title">Debreach: Mitigating Compression Side Channels via Static Analysis and Transformation 
                 (
-                    To appear
+                    <a href="papers/ase2019_debreach.pdf" target="_blank">PDF</a>
                 )
                 </span>
                 <span class="paper-etc">Brandon Paulsen, <b>Chungha Sung</b>, Peter Peterson, Chao Wang</span>
