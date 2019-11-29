@@ -11,7 +11,7 @@ Installations.
     type `bundle exec gulp [command]`
 - For commands, please check ``gulpfile.js`` file.
 - Example
-    `bundle exec gulp jekyll-build` to build jekyll site
+    `bundle exec jekyll build` to build jekyll site
 
 ## To run the site with jekyll
 - bundle exec jekyll serve
