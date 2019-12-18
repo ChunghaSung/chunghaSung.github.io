@@ -9,6 +9,15 @@ title: publications
     </li>
         <ul>
             <li>
+                <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study 
+                (
+                 To appear
+                )
+                </span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury, Chao Wang</span>
+                <span class="paper-etc">The 42nd International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Seoul, Korea, May 2020</span>
+            </li>
+            <li>
                 <span class="paper-title">Debreach: Mitigating Compression Side Channels via Static Analysis and Transformation 
                 (
                     <a href="papers/ase2019_debreach.pdf" target="_blank">PDF</a>
