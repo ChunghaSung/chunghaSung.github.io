@@ -11,7 +11,7 @@ title: publications
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study 
                 (
-                 To appear
+                    <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>
                 )
                 </span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury, Chao Wang</span>
