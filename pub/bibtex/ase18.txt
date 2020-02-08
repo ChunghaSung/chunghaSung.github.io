@@ -1,0 +1,16 @@
+@inproceedings{ASESung2018,
+    author = {Sung, Chungha and Lahiri, Shuvendu K. and Enea, Constantin and Wang, Chao},
+    title = {Datalog-Based Scalable Semantic Diffing of Concurrent Programs},
+    year = {2018},
+    isbn = {9781450359375},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3238147.3238211},
+    doi = {10.1145/3238147.3238211},
+    booktitle = {Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering},
+    pages = {656–666},
+    numpages = {11},
+    keywords = {atomicity, static analysis, change impact, race condition, Concurrency, Datalog, semantic diffing},
+    location = {Montpellier, France},
+    series = {ASE 2018}
+}
