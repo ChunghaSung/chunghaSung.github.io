@@ -11,7 +11,7 @@ title: publications
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury and Chao Wang</span>
-                <span class="paper-etc">The 42nd International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Seoul, Korea, May 2020</span>
+                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Seoul, Korea, Oct 2020</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>
@@ -21,7 +21,7 @@ title: publications
             <li>
                 <span class="paper-title">Debreach: Mitigating Compression Side Channels via Static Analysis and Transformation</span>
                 <span class="paper-etc">Brandon Paulsen, <b>Chungha Sung</b>, Peter Peterson and Chao Wang</span>
-                <span class="paper-etc">The 34th IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), San Diego, California, USA, Nov 2019</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), San Diego, California, USA, Nov 2019</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/ase2019_debreach.pdf" target="_blank">PDF</a>,
@@ -34,7 +34,7 @@ title: publications
             <li>
                 <span class="paper-title">Mitigating Power Side Channels during Compilation</span>
                 <span class="paper-etc">Jingbo Wang, <b>Chungha Sung</b> and Chao Wang</span>
-                <span class="paper-etc">The 27th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (<b>ESEC/FSE</b>), Tallinn, Estonia, Aug 2019</span>
+                <span class="paper-etc">ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (<b>ESEC/FSE</b>), Tallinn, Estonia, Aug 2019</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/fse2019_paper.pdf" target="_blank">PDF</a>,
@@ -46,7 +46,7 @@ title: publications
             <li>
                 <span class="paper-title">Datalog-based Scalable Semantic Diffing of Concurrent Programs</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Constantin Enea and Chao Wang</span>
-                <span class="paper-etc">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Corum, Montpellier, France, Sep 2018</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Corum, Montpellier, France, Sep 2018</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/ase2018_diff.pdf" target="_blank">PDF</a>,
@@ -59,7 +59,7 @@ title: publications
             <li>
                 <span class="paper-title">CANAL: A Cache Timing Analysis Framework via LLVM Transformation</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Brandon Paulsen and Chao Wang</span>
-                <span class="paper-etc">The 33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b> <i>Tool Demo Track</i>), Corum, Montpellier, France, Sep 2018</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b> <i>Tool Demo Track</i>), Corum, Montpellier, France, Sep 2018</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/ase2018_canal.pdf" target="_blank">PDF</a>, 
@@ -73,7 +73,7 @@ title: publications
             <li>
                 <span class="paper-title">Modular Verification of Interrupt-driven Software</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Markus Kusano and Chao Wang</span>
-                <span class="paper-etc">The 32nd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Champaign, Illinois, USA, Oct 2017</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Automated Software Engineering (<b>ASE</b>), Champaign, Illinois, USA, Oct 2017</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/ase17_paper.pdf" target="_blank">PDF</a>, 
@@ -87,7 +87,7 @@ title: publications
             <li>
                 <span class="paper-title">Static DOM Event Dependency Analysis for Testing Web Applications</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Markus Kusano, Nishant Sinha and Chao Wang</span>
-                <span class="paper-etc">The 24th ACM SIGSOFT International Symposium on the Foundations of Software Engineering (<b>FSE</b>), Seattle, Washington, USA, Nov 2016</span>
+                <span class="paper-etc">ACM SIGSOFT International Symposium on the Foundations of Software Engineering (<b>FSE</b>), Seattle, Washington, USA, Nov 2016</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/fse16_paper.pdf" target="_blank">PDF</a>, 
@@ -101,6 +101,17 @@ title: publications
         <li><span><u>Posters</u></span></li>
         <ul>
             <li>
+                <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Shuvendu K. Lahiri, Mike Kaufman, Pallavi Choudhury, Jessica Wolk and Chao Wang</span>
+                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>Poster Track</i>), Seoul, Korea, Oct 2020</span>
+                <span class="paper-etc">
+                [
+                    Abstract
+                ]
+                </span>
+
+            </li>
+            <li>
                 <span class="paper-title">RIGHT: an HTML canvas and JavaScript-based interactive data visualization package for linked graphics</span>
                 <span class="paper-etc"><b>ChungHa Sung</b>, TaeJoon Song, Jae W. Lee and Junghoon Lee</span>
                 <span class="paper-etc">The R User Conference (UseR), UCLA, Los Angeles, California, July 2014</span>
@@ -110,7 +121,9 @@ title: publications
                 ]
                 </span>
 
-<br>
-</li></ul></ul>
+            </li>
+            <br>
+        </ul>
+    </ul>
 </div>
 
