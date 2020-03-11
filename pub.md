@@ -102,7 +102,7 @@ title: publications
         <ul>
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
-                <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Shuvendu K. Lahiri, Mike Kaufman, Pallavi Choudhury, Jessica Wolk and Chao Wang</span>
+                <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury, Jessica Wolk and Chao Wang</span>
                 <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>Poster Track</i>), Seoul, Korea, Oct 2020</span>
                 <span class="paper-etc">
                 [
