@@ -11,10 +11,12 @@ title: publications
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury and Chao Wang</span>
-                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Seoul, Korea, Oct 2020</span>
+                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Virtual, July 2020</span>
                 <span class="paper-etc">
                 [
-                    <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>
+                    <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>,
+                    <a href="slides/icse2020_divergentForks_slide.pptx" target="_blank">Slides</a>,
+                    <a href="https://youtu.be/dU4xD-RYbv4" target="_blank">Video</a> 
                 ]
                 </span>
             </li>
@@ -103,10 +105,12 @@ title: publications
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury, Jessica Wolk and Chao Wang</span>
-                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>Poster Track</i>), Seoul, Korea, Oct 2020</span>
+                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>Poster Track</i>), Virtual, July 2020</span>
                 <span class="paper-etc">
                 [
-                    Abstract
+                    <a href="papers/icse2020_divergentForks_abstract.pdf" target="_blank">Abstract</a>,
+                    <a href="papers/icse2020_divergentForks_poster.pdf" target="_blank">Poster</a>,
+                    <a href="https://youtu.be/yPI7TBvUb_A" target="_blank">Video</a>
                 ]
                 </span>
 
