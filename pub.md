@@ -16,7 +16,7 @@ title: publications
                 [
                     <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>,
                     <a href="slides/icse2020_divergentForks_slide.pptx" target="_blank">Slides</a>,
-                    <a href="https://youtu.be/dU4xD-RYbv4" target="_blank">Video</a> 
+                    <a href="https://youtu.be/CoGL3it_ZSE" target="_blank">Talk</a> 
                 ]
                 </span>
             </li>
