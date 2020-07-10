@@ -10,8 +10,9 @@ title: publications
         <ul>
             <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
+                <span class="paper-etc">[Nominated as a best paper candidate]</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury and Chao Wang</span>
-                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Virtual, July 2020</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Korea (Virtual), July 2020</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>,
