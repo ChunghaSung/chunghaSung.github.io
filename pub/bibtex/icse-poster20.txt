@@ -1,0 +1,14 @@
+@inproceedings{ICSEPosterSung2020,
+author = {Sung, Chungha and Lahiri, Shuvendu K. and Kaufman, Mike and Choudhury, Pallavi and Wolk, Jessica and Wang, Chao},
+title = {Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study},
+year = {2020},
+isbn = {9781450371223},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3377812.3390800},
+doi = {10.1145/3377812.3390800},
+pages = {320–321},
+numpages = {2},
+location = {Seoul, South Korea},
+series = {ICSE '20}
+}

@@ -112,7 +112,8 @@ title: publications
                 [
                     <a href="papers/icse2020_divergentForks_abstract.pdf" target="_blank">Abstract</a>,
                     <a href="papers/icse2020_divergentForks_poster.pdf" target="_blank">Poster</a>,
-                    <a href="https://youtu.be/yPI7TBvUb_A" target="_blank">Video</a>
+                    <a href="https://youtu.be/yPI7TBvUb_A" target="_blank">Video</a>,
+                    <a href="bibtex/icse-poster20.txt" target="_blank">Bibtex</a>
                 ]
                 </span>
 
