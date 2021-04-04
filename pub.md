@@ -142,7 +142,6 @@ title: publications
                 </span>
 
             </li>
-            <br>
         </ul>
         <li><span><u>Dissertation</u></span></li>
         <ul>
