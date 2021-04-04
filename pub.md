@@ -9,10 +9,23 @@ title: publications
     </li>
         <ul>
             <li>
+                <span class="paper-title">Data-Driven Synthesis of Provably Sound Side Channel Analyses</span>
+                <span class="paper-etc">Jingbo Wang, <b>Chungha Sung</b>, Mukund Raghothaman and Chao Wang</span>
+                <span class="paper-etc">International Conference on Software Engineering (<b>ICSE</b>), Madrid, Spain (Virtual), May 2021</span>
+                <span class="paper-etc">
+                [
+                    <a href="https://arxiv.org/pdf/2102.06753.pdf" target="_blank">PDF</a>,
+                    Slides,
+                    Talk,
+                    Bibtex
+                ]
+                </span>
+            </li>
+            <li>
                 <span class="paper-title">Towards Understanding and Fixing Upstream Merge Induced Conflicts in Divergent Forks: An Industrial Case Study</span>
                 <span class="paper-etc">[Nominated as a best paper candidate]</span>
                 <span class="paper-etc"><b>Chungha Sung</b>, Shuvendu Lahiri, Mike Kaufman, Pallavi Choudhury and Chao Wang</span>
-                <span class="paper-etc">IEEE/ACM International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Korea (Virtual), July 2020</span>
+                <span class="paper-etc">IEEE/ACM International Conference on Software Engineering (<b>ICSE</b> <i>SEIP Track</i>), Seoul, Korea (Virtual), July 2020</span>
                 <span class="paper-etc">
                 [
                     <a href="papers/icse-seip_2020.pdf" target="_blank">PDF</a>,
@@ -125,6 +138,22 @@ title: publications
                 <span class="paper-etc">
                 [
                     <a href="papers/user14_abstract.pdf" target="_blank">Abstract</a>
+                ]
+                </span>
+
+            </li>
+            <br>
+        </ul>
+        <li><span><u>Dissertation</u></span></li>
+        <ul>
+            <li>
+                <span class="paper-title">Constraint-based Program Analysis for Concurrent Software</span>
+                <span class="paper-etc"><b>Chungha Sung</b></span>
+                <span class="paper-etc">University of Southern California, May 2021</span>
+                <span class="paper-etc">
+                [
+                    <a href="http://digitallibrary.usc.edu/cdm/ref/collection/p15799coll89/id/431587" target="_blank">PDF</a>,
+                    Bibtex
                 ]
                 </span>
 
