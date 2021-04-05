@@ -152,6 +152,7 @@ title: publications
                 <span class="paper-etc">
                 [
                     <a href="http://digitallibrary.usc.edu/cdm/ref/collection/p15799coll89/id/431587" target="_blank">PDF</a>,
+                    <a href="slides/chungha_defense_slides.pdf" target="_blank">Slides</a>,
                     Bibtex
                 ]
                 </span>
