@@ -1,0 +1,10 @@
+@INPROCEEDINGS{ICSEWang2021,
+  author={Wang, Jingbo and Sung, Chungha and Raghothaman, Mukund and Wang, Chao},
+  booktitle={2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)}, 
+  title={Data-Driven Synthesis of Provably Sound Side Channel Analyses}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={810-822},
+  doi={10.1109/ICSE43902.2021.00079}
+}
