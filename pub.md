@@ -17,7 +17,7 @@ title: publications
                     <a href="https://arxiv.org/pdf/2102.06753.pdf" target="_blank">PDF</a>,
                     Slides,
                     Talk,
-                    Bibtex
+                    <a href="bibtex/icse21.txt" target="_blank">Bibtex</a>
                 ]
                 </span>
             </li>
