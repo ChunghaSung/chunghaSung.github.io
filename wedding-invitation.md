@@ -7,7 +7,7 @@ title: wedding-invitation
 <head>
 
 <meta charset="utf-8">
-<title>잇츠카드 모바일 청첩장</title>
+<title> 청하 유빈 모바일 청첩장</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,target-densitydpi=medium-dpi" />
 <meta name="format-detection" content="telephone=no" />
 <meta property="og:type" content="website">
@@ -258,10 +258,10 @@ title: wedding-invitation
 <div class="sec-tit">" 함께 가는 길 "</div>
 <div class="map-area">
 <div class="head">
-<div class="tit">잇츠카드 웨딩홀 6층 노블레스홀</div>
+<div class="tit">천주교중림동약현성당</div>
 <div class="txt">
-<p>서울특별시 강남구 논현로 742</p>
-<p>Tel. 02-1234-5678</p>
+<p>서울특별시 중구 청파로 447-1</p>
+<p>Tel. 02-362-1891</p>
 </div>
 <a href="javascript:pcAlert();" class="tel">전화걸기</a>
 </div>
@@ -270,13 +270,26 @@ title: wedding-invitation
 <div style="height: 100%;">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6cc107b2a366895e22e0ba2626f4df2"></script>
 <script>
-var container = document.getElementById('map');
+var container = document.getElementById('map_canvas');
 var options = {
-center: new kakao.maps.LatLng(33.450701, 126.570667),
+center: new kakao.maps.LatLng(37.5590, 126.967472),
         level: 3
 };
 
 var map = new kakao.maps.Map(container, options);
+var marker = new kakao.maps.Marker({ 
+    // 지도 중심좌표에 마커를 생성합니다 
+    position: map.getCenter() 
+}); 
+// 지도에 마커를 표시합니다
+marker.setMap(map);
+
+
+var infowindow = new kakao.maps.InfoWindow({
+        content: '<div id="a" class="txt" style="font-size:15px;width:150px;text-align:center;padding:6px 0;">천주교중림동약현성당</div>'});
+infowindow.open(map, marker);
+
+
 </script>
 </div>
 </div>
@@ -287,7 +300,17 @@ var map = new kakao.maps.Map(container, options);
 <a href="javascript:pcAlert();" class="tmap">티맵</a>
 </li>
 <li>
-<a href="javascript:pcAlert();" class="kakaonavi">카카오내비</a>
+<a href="#" onclick="kakaonavi();" class="kakaonavi">카카오내비</a>
+<script type="text/javascript">
+  function kakaonavi() {
+    Kakao.Navi.start({
+      name: '현대백화점 판교점',
+      x: 127.11205203011632,
+      y: 37.39279717586919,
+      coordType: 'wgs84',
+    })
+  }
+</script>
 </li>
 <li>
 <a href="javascript:pcAlert();" class="navermap">네이버지도</a>
