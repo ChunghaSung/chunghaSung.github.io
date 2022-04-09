@@ -295,30 +295,113 @@ infowindow.open(map, marker);
 </div>
 </div>
 <div class="link">
+<script>
+
+var store_url="http://"
+
+function launch(appname,url){
+
+ var isAPPLE = (navigator.userAgent.match('iP') != null)
+ // 애플
+ if(isAPPLE){
+   location.href = url
+   var clickedAt = +new Date; 
+   appCheckTimer = setTimeout(function() {
+    if(+new Date - clickedAt < 2000){
+      store_url="http://itunes.apple.com/kr/app/"
+      if(appname=="navermap") store_url+="id311867728?mt=8"
+      if(appname=="daummap") store_url+="id304608425?mt=8"
+      if(appname=="kimgisa") store_url+="id417698849?mt=8"
+      if (confirm("앱이 설치되어 있지 않습니다. \n설치페이지로 이동할까요?")) { location.href = store_url }
+    }
+   }, 1500)
+  }
+  // 안드로이드
+ else {
+  store_url="market://details?id="
+  if(appname=="navermap") store_url+="com.nhn.android.nmap"
+  if(appname=="daummap") store_url+="net.daum.android.map"
+  if(appname=="kimgisa") store_url+="com.locnall.KimGiSa"
+  document.checkframe.location = url
+  var b = new Date()
+  setTimeout(function(){
+    if (new Date() - b < 1500) {
+      if(confirm("앱이 설치되있지 않습니다. \n설치페이지로 이동할까요?")){ location.href=store_url }
+    }
+  }, 500);
+  }
+
+}
+// 김기사 공식 URL : http://send.cangoto.com:8888/web/kimgisa/openapi/addpoi.jsp?name=%EB%A7%88%EB%A6%AC%EB%93%9C%EB%B8%94%EB%9E%91&coord_type=wgs84&pos_x=127.041402441998&pos_y=37.5046984859674&key=d5c2bdecc9cf4ba8b0001a5b493a2713&dwflag=N
+// 티맵 공식 URL : http://m.tmap.co.kr/tmap2/mobile/route.jsp?name=SKT타워&lon=126.984098&lat=37.566385
+// 티맵 수정 : href="./navi/tmap/?name=마리드블랑&posx=127.041402441998&posy=37.5046984859674"
+</script>
+
 <ul>
 <li>
-<a href="javascript:pcAlert();" class="tmap">티맵</a>
+<a target="_blank" class="tmap" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&name=%EB%A7%88%EB%A6%AC%EB%93%9C%EB%B8%94%EB%9E%91&lon=127.041402441998&lat=37.5046984859674">티맵</a>
 </li>
 <li>
-<a href="#" onclick="kakaonavi();" class="kakaonavi">카카오내비</a>
-<script type="text/javascript">
-  function kakaonavi() {
-    Kakao.Navi.start({
-      name: '현대백화점 판교점',
-      x: 127.11205203011632,
-      y: 37.39279717586919,
-      coordType: 'wgs84',
-    })
-  }
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type='text/javascript'>
+Kakao.init('13da3914377346b0b8f74f5309b49dad');
+function kakao_navi(){
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ Kakao.Navi.start({
+        name: '%EB%A7%88%EB%A6%AC%EB%93%9C%EB%B8%94%EB%9E%91',
+        x: 127.041402441998,
+        y: 37.5046984859674,
+        coordType: 'wgs84'
+    });
+} else {
+   alert('모바일 기기 전용 기능입니다')
+}
+    
+}
 </script>
+<a href="#" onclick="kakao_navi();" class="kakaonavi">카카오내비</a>
+</li>
+
+
+<li>
+<a href="#" onclick='app_install("navermap")' class="navermap">네이버지도</a>
 </li>
 <li>
-<a href="javascript:pcAlert();" class="navermap">네이버지도</a>
-</li>
-<li>
-<a href="javascript:pcAlert();" class="kakaomap">카카오맵</a>
+<a href="#" onclick='app_install("tmap")' class="kakaomap">카카오맵</a>
 </li>
 </ul>
+
+<script>
+function app_install(appname){
+
+		var isAPPLE = (navigator.userAgent.match('iP') != null)
+
+		// 애플
+		if(isAPPLE){
+				store_url="http://itunes.apple.com/kr/app/"
+				if(appname=="navermap") store_url+="id311867728?mt=8"
+				if(appname=="daummap") store_url+="id304608425?mt=8"
+				if(appname=="kimgisa") store_url+="id417698849?mt=8"
+				if(appname=="tmap") store_url+="id431589174?mt=8"
+				if(appname=="atlan") store_url+="id542287735?mt=8"
+		}
+		
+		// 안드로이드
+		else {
+				store_url="market://details?id="
+				if(appname=="navermap") store_url+="com.nhn.android.nmap"
+				if(appname=="daummap") store_url+="net.daum.android.map"
+				if(appname=="kimgisa") store_url+="com.locnall.KimGiSa"
+				//if(appname=="tmap") store_url+="com.skt.skaf.l001mtm092"
+				if(appname=="tmap") store_url+="com.skt.tmap.ku"
+				if(appname=="atlan") store_url+="kr.mappers.AtlanSmart"
+		}
+
+	  window.open(store_url)
+
+}
+</script>
 </div>
 </div>
 <!--<div class="map-img">
