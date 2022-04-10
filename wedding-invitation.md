@@ -305,6 +305,7 @@ infowindow.open(map, marker);
 //Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
 function kakao_navi(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   Kakao.init('d6cc107b2a366895e22e0ba2626f4df2')
    Kakao.Navi.start({
         name: '천주교중림동약현성당',
         x: 126.96697441028365,
@@ -334,8 +335,6 @@ function kakao_navi(){
 </div>-->
 <div class="info">
 <div class="contain">
-
-<p>오시는 길</p>
 <dl>
 <dt>서울역 기차 탑승 하차시 (약 655M 도보로 11분소요)</dt>
 <dd>공항철도,경의선쪽 3번출구 롯데마트쪽 계단으로 내려와 우측 150M직진 -횡단보도이용-우측으로 300M 직진</dd>
@@ -384,22 +383,169 @@ function kakao_navi(){
 
 <!-- 축의금 계좌번호-->
 <section class="account-section">
-<div class="sec-tit">" 신랑신부에게 마음 전하기 "</div>
-<div class="sec-txt">축하의 마음을 담아 축의금을 전달해보세요.</div>
-<div class="ib">
-<div class="row">
-<div class="slsb-tit">신랑측 마음</div>
-<div class="slsb-btn">
-<a href="javascript:popOpen('0 1rem','accountCopyG');" class="com-btn acc sl">계좌번호 보기</a>						
+<div class="sec-tit">축하의 마음을 전하세요.</div>
+<div class="sec-txt">축하의 마음을 담아 축의금을 전달해 보세요.</div>
+<style>
+.section_desc {
+    font-family: 'SpoqaHanSans';
+    font-size: 12px;
+    font-weight: 300;
+    border-bottom: 0;
+    text-align: center;
+    color: #333333;
+    margin-top: -20px;
+}
+.bank_txt {
+    cursor: pointer;
+}
+.bank_txt_num {
+    margin-top: 6px;
+}
+.bank_txt_notice {
+    color: #777777;
+    font-size: 11px;
+    text-align: right;
+}
+.contact_row {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact_button {
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contact_button_txt {
+  font-size: 13px;
+  margin-top: 10px;
+}
+[class$=button] { cursor: pointer; }
+.form_layer {
+  display: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #ececec;
+    border-right-color: rgb(236, 236, 236);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(236, 236, 236);
+    border-left-style: solid;
+    border-left-width: 1px;
+  border-left: 0;
+  border-right: 0;
+  position: fixed;
+  z-index: 11;
+  top: 50px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.form_close_button {
+  cursor: pointer;
+  height: 17px;
+  position: absolute;
+  right: 15px;
+  top: 17px;
+}
+</style>
+<div class="contact_row" style="border-top: 0;">
+<script>
+$('.contact_button').bind('click', function() {
+mask(0.5)
+var type = $(this).data('type')
+$('#contact_'+type).show()
+})
+
+function test() {
+console.log("here")
+document.getElementById('contact_m').style.display = "block";
+}
+
+</script>
+<div class="contact_button" data-type="m" onclick="test();">
+<img src="../assets/invitation/img/bank_txt_btn_a.png" height="45">
+<div class="contact_button_txt">신랑측 계좌번호 확인</div>
+</div>
+<div class="contact_button" data-type="f">
+<img src="../assets/invitation/img/bank_txt_btn_b.png" height="45">
+<div class="contact_button_txt">신부측 계좌번호 확인</div>
 </div>
 </div>
-<div class="row">
-<div class="slsb-tit">신부측 마음</div>
-<div class="slsb-btn">
-<a href="javascript:popOpen('0 1rem','accountCopyB');" class="com-btn acc sb">계좌번호 보기</a>						
+
+<div id="contact_m" style="width:95%;position:absolute;left:2.5%; top: -30px;">
+<img class="form_close_button" id="guest_user_form_close_button" src="../assets/invitation/img/button_x_01_black.png" height="17"> 
+<div class="form_title" style="background-image: url('../assets/invitation/img/bank_txt_btn_a.png'); line-height: 45px;"> 신랑측 계좌번호 </div>
+<table cellspacing="0" cellpadding="0" class="contact_row_table">
+<colgroup>
+<col width="35%">
+<col width="65%">
+</colgroup>
+<tbody>
+<tr>
+<td>신랑 김성태</td>
+<td class="bank_txt">
+<div class="bank_txt_com">국민은행</div>
+<div class="bank_txt_num">514202-01-473953</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="bank_txt_notice">계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</div>
 </div>
-</div>		
-</div>
+<div class="mask_over form_layer" id="contact_f" style="width:95%;position:absolute;left:2.5%; top: -30px;">
+<img class="form_close_button" id="guest_user_form_close_button" src="../assets/invitation/img/button_x_01_black.png" height="17"> 
+<div class="form_title" style="background-image: url('../assets/invitation/img/bank_txt_btn_b.png'); line-height: 45px;"> 신부측 계좌번호 </div>
+<table cellspacing="0" cellpadding="0" class="contact_row_table">
+<colgroup>
+<col width="35%">
+<col width="65%">
+</colgroup>
+<tbody>
+<tr>
+<td>부) 신운교</td>
+                            <td class="bank_txt">
+                                <div class="bank_txt_com">농협</div>
+                                <div class="bank_txt_num">72107352099111</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                                                                    <table cellspacing="0" cellpadding="0" class="contact_row_table">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="65%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>신부 신보배</td>
+                            <td class="bank_txt">
+                                <div class="bank_txt_com">카카오뱅크</div>
+                                <div class="bank_txt_num">3333023806943</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                            <div class="bank_txt_notice">계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</div>
+    </div>
+
+<div style="height: 20px;">&nbsp;</div>
+
+
+<script>
+$(function(){
+    $('.bank_txt').on('click', function(){
+        var bank_txt = $('.bank_txt_com', this).text() + ' ' + $('.bank_txt_num', this).text()
+        if (bank_txt.length > 1) {
+            clipboard_copy(bank_txt)
+            alert(bank_txt + ' 복사되었습니다')
+        }
+    })
+})
+</script>
+        </div>
 </section>
 <!--// 축의금 계좌번호-->
 
