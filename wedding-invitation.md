@@ -300,9 +300,9 @@ infowindow.open(map, marker);
 <a target="_blank" class="tmap" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx3a68a3c58b74417cbd7410f35f042b08&name=천주교중림동약현성당&lon=126.96697441028365&lat=37.559081953946645">티맵</a>
 </li>
 <li>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6cc107b2a366895e22e0ba2626f4df2&libraries=services,clusterer,drawing"></script>
 <script type='text/javascript'>
-Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
+//Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
 function kakao_navi(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    Kakao.Navi.start({
@@ -324,7 +324,7 @@ function kakao_navi(){
 <a target="_blank" class="navermap" href="nmap://place?lat=37.559081953946645&lng=126.96697441028365&name=천주교중림동약현성당">네이버지도</a>
 </li>
 <li>
-<a target="_blank" onclick='app_install("tmap")' class="kakaomap">카카오맵</a>
+<a target="_blank" class="kakaomap" href="https://map.kakao.com/link/to/천주교중림동약현성당,37.559081953946645,126.96697441028365">카카오맵</a>
 </li>
 </ul>
 </div>
