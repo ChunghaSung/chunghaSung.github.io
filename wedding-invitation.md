@@ -150,14 +150,14 @@ title: wedding-invitation
 <div class="col">
 <div class="honju-tit sl">신랑 측 혼주</div>
 <div class="box first">
-<div class="name"><span>아버지</span> <strong>이석훈</strong></div>
+<div class="name"><span>아버지</span> <strong>성광현</strong></div>
 <div class="honju-btn">
 <a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
 <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 <div class="box">
-<div class="name"><span>어머니</span> <strong>이미자</strong></div>
+<div class="name"><span>어머니</span> <strong>박소현</strong></div>
 <div class="honju-btn">
 <a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
 <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
@@ -167,14 +167,14 @@ title: wedding-invitation
 <div class="col">
 <div class="honju-tit sb">신부 측 혼주</div>
 <div class="box first">
-<div class="name"><span>아버지</span> <strong>유성령</strong></div>
+<div class="name"><span>아버지</span> <strong>한흥석</strong></div>
 <div class="honju-btn">
 <a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
 <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 <div class="box">
-<div class="name"><span>어머니</span> <strong>박효순</strong></div>
+<div class="name"><span>어머니</span> <strong>송낭섭</strong></div>
 <div class="honju-btn">
 <a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
 <a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
@@ -200,41 +200,41 @@ title: wedding-invitation
 <section class="gallery-section type3">
 <div class="sec-tit">" 하나되는 날 "</div>
 <div class="contain">
-<ul class="type3-list">
-<li onclick="galleryPOP('open', 'type3', 1);">
+<ul class="type2-list">
+<li onclick="galleryPOP('open', 'type2', 1);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-1.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 2);">
+<li onclick="galleryPOP('open', 'type2', 2);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 3);">
+<li onclick="galleryPOP('open', 'type2', 3);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 4);">
+<li onclick="galleryPOP('open', 'type2', 4);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 5);">
+<li onclick="galleryPOP('open', 'type2', 5);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 6);">
+<li onclick="galleryPOP('open', 'type2', 6);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 7);">
+<li onclick="galleryPOP('open', 'type2', 7);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 8);">
+<li onclick="galleryPOP('open', 'type2', 8);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 9);">
+<li onclick="galleryPOP('open', 'type2', 9);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 10);">
+<li onclick="galleryPOP('open', 'type2', 10);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 11);">
+<li onclick="galleryPOP('open', 'type2', 11);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type3', 12);">
+<li onclick="galleryPOP('open', 'type2', 12);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
 </ul>
@@ -938,15 +938,15 @@ function bgmStop(){
 popGallery();
 
 // 달력
-dataPicker('2019-09-26');
+dataPicker('2022-05-28');
 
 $(window).scroll(function(){
-        if($(".visual-section").outerHeight() - 50 <= $(window).scrollTop()){
-        $(".music").addClass("active");
-        } else{
-        $(".music").removeClass("active");
-        }
-        });
+if($(".visual-section").outerHeight() - 50 <= $(window).scrollTop()){
+  $(".music").addClass("active");
+} else{
+  $(".music").removeClass("active");
+}
+});
 
 // 다음 지도
 // daumMap(37.546303, 127.048160);
