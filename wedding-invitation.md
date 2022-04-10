@@ -302,7 +302,7 @@ infowindow.open(map, marker);
 <li>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type='text/javascript'>
-Kakao.init('13da3914377346b0b8f74f5309b49dad');
+Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
 function kakao_navi(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    Kakao.Navi.start({
