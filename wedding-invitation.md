@@ -301,11 +301,11 @@ infowindow.open(map, marker);
 </li>
 <li>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6cc107b2a366895e22e0ba2626f4df2&libraries=services,clusterer,drawing"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type='text/javascript'>
-//Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
+Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
 function kakao_navi(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   Kakao.init('d6cc107b2a366895e22e0ba2626f4df2')
    Kakao.Navi.start({
         name: '천주교중림동약현성당',
         x: 126.96697441028365,
