@@ -8,7 +8,7 @@ title: wedding-invitation
 
 <meta charset="utf-8">
 <title> 청하 유빈 모바일 청첩장</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,target-densitydpi=medium-dpi" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi" />
 <meta name="format-detection" content="telephone=no" />
 <meta property="og:type" content="website">
 <meta property="og:image" content=""> <!-- Link Image -->
@@ -450,6 +450,61 @@ function kakao_navi(){
   right: 15px;
   top: 17px;
 }
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: orange;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+/* These are the rules you are looking for. */
+.overlay {
+    transition: opacity 500ms;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay:target {
+    opacity: 0;
+    pointer-events: none;
+}
 </style>
 <div class="contact_row" style="border-top: 0;">
 <script>
@@ -465,7 +520,7 @@ document.getElementById('contact_m').style.display = "block";
 }
 
 </script>
-<div class="contact_button" data-type="m" onclick="test();">
+<div class="contact_button" data-type="m" href="#popup">
 <img src="../assets/invitation/img/bank_txt_btn_a.png" height="45">
 <div class="contact_button_txt">신랑측 계좌번호 확인</div>
 </div>
@@ -475,61 +530,10 @@ document.getElementById('contact_m').style.display = "block";
 </div>
 </div>
 
-<div id="contact_m" style="width:95%;position:absolute;left:2.5%; top: -30px;">
-<img class="form_close_button" id="guest_user_form_close_button" src="../assets/invitation/img/button_x_01_black.png" height="17"> 
-<div class="form_title" style="background-image: url('../assets/invitation/img/bank_txt_btn_a.png'); line-height: 45px;"> 신랑측 계좌번호 </div>
-<table cellspacing="0" cellpadding="0" class="contact_row_table">
-<colgroup>
-<col width="35%">
-<col width="65%">
-</colgroup>
-<tbody>
-<tr>
-<td>신랑 김성태</td>
-<td class="bank_txt">
-<div class="bank_txt_com">국민은행</div>
-<div class="bank_txt_num">514202-01-473953</div>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="bank_txt_notice">계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</div>
-</div>
-<div class="mask_over form_layer" id="contact_f" style="width:95%;position:absolute;left:2.5%; top: -30px;">
-<img class="form_close_button" id="guest_user_form_close_button" src="../assets/invitation/img/button_x_01_black.png" height="17"> 
-<div class="form_title" style="background-image: url('../assets/invitation/img/bank_txt_btn_b.png'); line-height: 45px;"> 신부측 계좌번호 </div>
-<table cellspacing="0" cellpadding="0" class="contact_row_table">
-<colgroup>
-<col width="35%">
-<col width="65%">
-</colgroup>
-<tbody>
-<tr>
-<td>부) 신운교</td>
-                            <td class="bank_txt">
-                                <div class="bank_txt_com">농협</div>
-                                <div class="bank_txt_num">72107352099111</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                                                                    <table cellspacing="0" cellpadding="0" class="contact_row_table">
-                    <colgroup>
-                        <col width="35%">
-                        <col width="65%">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <td>신부 신보배</td>
-                            <td class="bank_txt">
-                                <div class="bank_txt_com">카카오뱅크</div>
-                                <div class="bank_txt_num">3333023806943</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                            <div class="bank_txt_notice">계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.</div>
-    </div>
+
+
+
+
 
 <div style="height: 20px;">&nbsp;</div>
 
