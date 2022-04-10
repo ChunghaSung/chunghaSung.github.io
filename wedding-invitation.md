@@ -295,46 +295,6 @@ infowindow.open(map, marker);
 </div>
 </div>
 <div class="link">
-<script>
-
-var store_url="http://"
-
-function launch(appname,url){
-
- var isAPPLE = (navigator.userAgent.match('iP') != null)
- // 애플
- if(isAPPLE){
-   location.href = url
-   var clickedAt = +new Date; 
-   appCheckTimer = setTimeout(function() {
-    if(+new Date - clickedAt < 2000){
-      store_url="http://itunes.apple.com/kr/app/"
-      if(appname=="navermap") store_url+="id311867728?mt=8"
-      if(appname=="daummap") store_url+="id304608425?mt=8"
-      if(appname=="kimgisa") store_url+="id417698849?mt=8"
-      if (confirm("앱이 설치되어 있지 않습니다. \n설치페이지로 이동할까요?")) { location.href = store_url }
-    }
-   }, 1500)
-  }
-  // 안드로이드
- else {
-  store_url="market://details?id="
-  if(appname=="navermap") store_url+="com.nhn.android.nmap"
-  if(appname=="daummap") store_url+="net.daum.android.map"
-  if(appname=="kimgisa") store_url+="com.locnall.KimGiSa"
-  document.checkframe.location = url
-  var b = new Date()
-  setTimeout(function(){
-    if (new Date() - b < 1500) {
-      if(confirm("앱이 설치되있지 않습니다. \n설치페이지로 이동할까요?")){ location.href=store_url }
-    }
-  }, 500);
-  }
-
-}
-
-</script>
-
 <ul>
 <li>
 <a target="_blank" class="tmap" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx3a68a3c58b74417cbd7410f35f042b08&name=천주교중림동약현성당&lon=126.96697441028365&lat=37.559081953946645">티맵</a>
@@ -361,7 +321,7 @@ function kakao_navi(){
 
 
 <li>
-<a target="_blank" class="navermap" href="nmap://place?lat=35.17982543369992&lng=129.07499499992576&name=%EB%B6%80%EC%82%B0%EC%8B%9C%EC%B2%AD">네이버지도</a>
+<a target="_blank" class="navermap" href="nmap://place?lat=37.559081953946645&lng=126.96697441028365&name=천주교중림동약현성당">네이버지도</a>
 </li>
 <li>
 <a target="_blank" onclick='app_install("tmap")' class="kakaomap">카카오맵</a>
