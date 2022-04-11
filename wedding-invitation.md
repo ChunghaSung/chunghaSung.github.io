@@ -128,15 +128,15 @@ title: wedding-invitation
 <div class="row">
 <div class="slsb-tit">신랑에게 연락하기</div>
 <div class="slsb-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01027196934" class="com-btn tel sl">연락하기</a>
+<a href="sms:01027196934" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 <div class="row">
 <div class="slsb-tit">신부에게 연락하기</div>
 <div class="slsb-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01092337299" class="com-btn tel sb">연락하기</a>
+<a href="sms:01092337299" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 </div>
@@ -707,7 +707,7 @@ function kakao_navi(){
 <div>
 <input name="BBankNum2" id="BBankNum2" class="input" readonly value="695002-01-219191"><button type="button" class="btn" onclick="jsCopyLink('69500201219191', 'accountCopyB', '4')">복사</button>
 </div>
-</div>			
+</div>	
 </form>
 </div>
 </div>
@@ -821,7 +821,7 @@ function music_player(){
     bgmStop();
     $('#m_off').text('stop')
     document.getElementById('m_on').src="../assets/invitation/img/music_01_off.png" 
-}
+  }
 }
 
 function bgmStart(link){
