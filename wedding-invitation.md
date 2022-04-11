@@ -190,7 +190,7 @@ title: wedding-invitation
 <div class="calendar-wrap">
 <div id="calendar"></div>
 <div class="day-time">
-<span class="day">sat.</span> <span class="time">pm 1:30</span>
+<span class="day">Sat.</span> <span class="time">4:00 PM</span>
 </div>
 </div>
 </section>
@@ -855,7 +855,7 @@ music_player();
 popGallery();
 
 // 달력
-dataPicker('2022-05-28');
+dataPicker('2022-05-28T09:00:00.000Z');
 
 $(window).scroll(function(){
 if($(".visual-section").outerHeight() - 50 <= $(window).scrollTop()){

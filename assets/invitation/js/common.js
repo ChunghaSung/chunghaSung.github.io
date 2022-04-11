@@ -78,6 +78,7 @@ function dataPicker(data) { // 달력 출력
 	var el = $("#calendar");
 	var date = new Date(data);
 
+    console.log(date.toISOString());
 	el.datepicker({
 		dateFormat: 'yyyy-mm-dd' //Input Display Format 변경
 		,defaultDate: date // 기본 날짜 설정
