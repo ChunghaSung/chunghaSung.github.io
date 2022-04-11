@@ -11,10 +11,10 @@ title: wedding-invitation
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi" />
 <meta name="format-detection" content="telephone=no" />
 <meta property="og:type" content="website">
-<meta property="og:image" content=""> <!-- Link Image -->
+<meta property="og:image" content="../assets/invitation/img/church-1.jpeg"> <!-- Link Image -->
 <meta property="og:title" content="청하 유빈 모바일청첩장"> <!-- Link Title -->
-<meta property="og:description" content=""> <!-- Link Text -->
-<meta property="og:url" content=""> <!-- Link URL -->
+<meta property="og:description" content="우리 결혼합니다"> <!-- Link Text -->
+<meta property="og:url" content="https://chunghasung.org/wedding-invitation"> <!-- Link URL -->
 <link rel="stylesheet" type="text/css" href="../assets/invitation/css/kopubbatang.css" /> <!-- font-family: 'KoPub Batang'; -->
 <link rel="stylesheet" type="text/css" href="../assets/invitation/css/nanummyeongjo.css" /> <!-- font-family: 'Nanum Myeongjo'; -->
 <link rel="stylesheet" type="text/css" href="../assets/invitation/css/notosanskr.css" /> <!-- font-family: 'Noto Sans KR'; -->
@@ -51,8 +51,8 @@ title: wedding-invitation
 <div class="vertical-top">
 <div class="vertical-item tit">
 <p class="p1">
-두 사람의<br>
-결혼식
+우리 결혼<br>
+합니다
 </p>
 <p class="p2">
 <span class="vs-span">성청하</span>
@@ -152,15 +152,15 @@ title: wedding-invitation
 <div class="box first">
 <div class="name"><span>아버지</span> <strong>성광현</strong></div>
 <div class="honju-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01054869607" class="com-btn tel sl">연락하기</a>
+<a href="sms:01054869607" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 <div class="box">
 <div class="name"><span>어머니</span> <strong>박소현</strong></div>
 <div class="honju-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sl">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01063739607" class="com-btn tel sl">연락하기</a>
+<a href="sms:01063739607" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 </div>
@@ -169,15 +169,15 @@ title: wedding-invitation
 <div class="box first">
 <div class="name"><span>아버지</span> <strong>한흥석</strong></div>
 <div class="honju-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01025305143" class="com-btn tel sb">연락하기</a>
+<a href="sms:01025305143" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 <div class="box">
 <div class="name"><span>어머니</span> <strong>송낭섭</strong></div>
 <div class="honju-btn">
-<a href="javascript:pcAlert();" class="com-btn tel sb">연락하기</a>
-<a href="javascript:pcAlert();" class="com-btn sms">문자보내기</a>
+<a href="tel:01064605143" class="com-btn tel sb">연락하기</a>
+<a href="sms:01064605143" class="com-btn sms">문자보내기</a>
 </div>
 </div>
 </div>
@@ -246,7 +246,7 @@ title: wedding-invitation
 <!--// 텍스트 배너 -->
 <section class="tbanner-section">
 <div class="text vertical">
-<div class="text">두 사람의
+<div class="text">저희의
 아름다운 시작을
 함께 해주세요.</div>
 </div>
@@ -261,11 +261,12 @@ title: wedding-invitation
 <div class="tit">천주교중림동약현성당</div>
 <div class="txt">
 <p>서울특별시 중구 청파로 447-1</p>
-<p>Tel. 02-362-1891</p>
 </div>
-<a href="javascript:pcAlert();" class="tel">전화걸기</a>
+<button type="button" class="btn" onclick="addressCopyLink('서울특별시 중구 청파로 447-1')">주소 복사</button>
 </div>
-<div id="map_canvas" class="map">
+<div id="map_canvas" class="map">+
+
+
 <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:100%; height:100%; color:#333; position:relative">
 <div style="height: 100%;">
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6cc107b2a366895e22e0ba2626f4df2"></script>
@@ -336,6 +337,28 @@ function kakao_navi(){
 <div class="info">
 <div class="contain">
 <dl>
+<style>
+.mybutton {
+  position: relative;
+  background-color: #b7b7b7;
+  left:0.6rem;
+  top: 0.1rem;
+  border: none;
+  padding: 0.1rem 0.4rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.6rem;
+  border-radius: 10%
+}
+</style>
+<dt>자가용 이용시 주차 안내<button class="mybutton" onclick="addressCopyLink('서울시 중구 칠패로 5')">주차장 주소 복사</button></dt>
+
+<dd>서소문 역사박물관 주차장 (서울시 중구 칠패로 5) 에 주차하시면 축의대에서 주차권을 드립니다. 주차장에서 도보 5분 소요</dd>
+
+</dl>
+<dl>
 <dt>서울역 기차 탑승 하차시 (약 655M 도보로 11분소요)</dt>
 <dd>공항철도,경의선쪽 3번출구 롯데마트쪽 계단으로 내려와 우측 150M직진 -횡단보도이용-우측으로 300M 직진</dd>
 </dl>
@@ -362,10 +385,6 @@ function kakao_navi(){
 5.서울역 서부(남영동 방향) : 163(파)261(파)262(파)263(파)604(파)
 6.서울역 서부(길 건너 편) : 163(파)261(파)263(파)503(파)604(파)
 </dd>
-</dl>
-<dl>
-<dt>자가용 이용시 주차 안내</dt>
-<dd>서소문 역사박물관 주차장 (서울시 중구 칠패로 5) 에 주차하시면 축의대에서 주차권을 드립니다. 주차장에서 도보 5분 소요</dd>
 </dl>
 </div>
 </div>
@@ -715,6 +734,27 @@ function kakao_navi(){
 </div>
 </div>
 
+<div class="pop-wrap copyComplete" id="copyCompleteAdd">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">주소가 복사되었습니다.</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyCompleteAdd')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
 <div class="pop-wrap copyComplete" id="copyComplete1">
 <div class="pop-inner">
 <div class="pop-body">
@@ -880,6 +920,21 @@ function jsCopyLink(copyText, id, complete_id) {
     document.body.removeChild(tmpTextarea);
     popClose(id);
     popOpen('0 1rem','copyComplete'+complete_id);
+    //alert("URL 복사가 완료되었습니다."); 					  
+}
+
+function addressCopyLink(copyText) {
+    var tmpTextarea = document.createElement('textarea');
+    tmpTextarea.value = copyText;
+
+    document.body.appendChild(tmpTextarea);
+    tmpTextarea.select();
+    tmpTextarea.setSelectionRange(0, 9999);  // 셀렉트 범위 설정
+
+    document.execCommand('copy');
+    document.body.removeChild(tmpTextarea);
+ 
+    popOpen('0 1rem','copyCompleteAdd');
     //alert("URL 복사가 완료되었습니다."); 					  
 }
 </script>
