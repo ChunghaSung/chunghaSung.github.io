@@ -38,7 +38,7 @@ title: wedding-invitation
 <div class="music">
 <a href="javascript:music_player()">
 <div>
-  <img id="m_on" src="../assets/invitation/img/music_01_on.png" tppabs="../assets/invitation/img/music_01_off.png"/>
+  <img id="m_on" src="../assets/invitation/img/music_01_off.png" tppabs="../assets/invitation/img/music_01_off.png"/>
   <p style="display:none;" id="m_off">stop</p>
 </div>
 </a>
@@ -383,173 +383,23 @@ function kakao_navi(){
 
 <!-- 축의금 계좌번호-->
 <section class="account-section">
-<div class="sec-tit">축하의 마음을 전하세요.</div>
-<div class="sec-txt">축하의 마음을 담아 축의금을 전달해 보세요.</div>
-<style>
-.section_desc {
-    font-family: 'SpoqaHanSans';
-    font-size: 12px;
-    font-weight: 300;
-    border-bottom: 0;
-    text-align: center;
-    color: #333333;
-    margin-top: -20px;
-}
-.bank_txt {
-    cursor: pointer;
-}
-.bank_txt_num {
-    margin-top: 6px;
-}
-.bank_txt_notice {
-    color: #777777;
-    font-size: 11px;
-    text-align: right;
-}
-.contact_row {
-  position: relative;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.contact_button {
-  display: inline-block;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.contact_button_txt {
-  font-size: 13px;
-  margin-top: 10px;
-}
-[class$=button] { cursor: pointer; }
-.form_layer {
-  display: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: 1px solid #ececec;
-    border-right-color: rgb(236, 236, 236);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-left-color: rgb(236, 236, 236);
-    border-left-style: solid;
-    border-left-width: 1px;
-  border-left: 0;
-  border-right: 0;
-  position: fixed;
-  z-index: 11;
-  top: 50px;
-  background-color: #ffffff;
-  padding: 20px;
-}
-.form_close_button {
-  cursor: pointer;
-  height: 17px;
-  position: absolute;
-  right: 15px;
-  top: 17px;
-}
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover {
-    color: orange;
-}
-
-.popup .content {
-    max-height: 30%;
-    overflow: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-}
-/* These are the rules you are looking for. */
-.overlay {
-    transition: opacity 500ms;
-    opacity: 1;
-    pointer-events: all;
-}
-
-.overlay:target {
-    opacity: 0;
-    pointer-events: none;
-}
-</style>
-<div class="contact_row" style="border-top: 0;">
-<script>
-$('.contact_button').bind('click', function() {
-mask(0.5)
-var type = $(this).data('type')
-$('#contact_'+type).show()
-})
-
-function test() {
-console.log("here")
-document.getElementById('contact_m').style.display = "block";
-}
-
-</script>
-<div class="contact_button" data-type="m" href="#popup">
-<img src="../assets/invitation/img/bank_txt_btn_a.png" height="45">
-<div class="contact_button_txt">신랑측 계좌번호 확인</div>
-</div>
-<div class="contact_button" data-type="f">
-<img src="../assets/invitation/img/bank_txt_btn_b.png" height="45">
-<div class="contact_button_txt">신부측 계좌번호 확인</div>
+<div class="sec-tit">" 신랑신부에게 마음 전하기 "</div>
+<div class="sec-txt">축하의 마음을 담아 축의금을 전달해보세요.</div>
+<div class="ib">
+<div class="row">
+<div class="slsb-tit">신랑측 마음</div>
+<div class="slsb-btn">
+<a href="javascript:popOpen('0 1rem','accountCopyG');" class="com-btn acc sl">계좌번호 보기</a>
 </div>
 </div>
+<div class="row">
+<div class="slsb-tit">신부측 마음</div>
+<div class="slsb-btn">
+<a href="javascript:popOpen('0 1rem','accountCopyB');" class="com-btn acc sb">계좌번호 보기</a>
+</div>
+</div>	
+</div>
 
-
-
-
-
-
-<div style="height: 20px;">&nbsp;</div>
-
-
-<script>
-$(function(){
-    $('.bank_txt').on('click', function(){
-        var bank_txt = $('.bank_txt_com', this).text() + ' ' + $('.bank_txt_num', this).text()
-        if (bank_txt.length > 1) {
-            clipboard_copy(bank_txt)
-            alert(bank_txt + ' 복사되었습니다')
-        }
-    })
-})
-</script>
-        </div>
 </section>
 <!--// 축의금 계좌번호-->
 
@@ -624,7 +474,6 @@ $(function(){
 </div>
 </section>
 <!-- 메시지 //-->
-</div>
 
 <!--// 푸터 -->
 <footer id="footer">
@@ -642,12 +491,8 @@ $(function(){
 </li>
 </ul>
 </div>
-<div class="foot-logo">
-it`s card
-</div>
 </footer>
 <!-- 푸터 //-->
-</div>
 
 <div class="gallery-pop-wrap">
 <div class="pop-header">
@@ -800,28 +645,28 @@ it`s card
 <form action="">
 <div class="group col-2 first">
 <div>
-국민은행
+농협
 </div>
 <div>
-<span>예금주 : </span> 이석훈
+<span>예금주 : </span> [모]박소현
 </div>
 </div>
 <div class="group">
 <div>
-<input name="GBankNum1" id="GBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyG')">복사</button>
+<input name="GBankNum1" id="GBankNum1" class="input" readonly value="281-12-283710"><button type="button" class="btn" onclick="jsCopyLink('28112283710', 'accountCopyG', '1')">복사</button>
 </div>
 </div>
 <div class="group col-2">
 <div>
-국민은행
+우리은행
 </div>
 <div>
-<span>예금주 : </span> 이석훈
+<span>예금주 : </span> 성청하
 </div>
 </div>
 <div class="group">
 <div>
-<input name="GBankNum2" id="GBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+<input name="GBankNum2" id="GBankNum2" class="input" readonly value="1002-633-915014"><button type="button" class="btn" onclick="jsCopyLink('1002633915014', 'accountCopyG', '2')">복사</button>
 </div>
 </div>
 </form>
@@ -842,12 +687,12 @@ it`s card
 국민은행
 </div>
 <div>
-<span>예금주 : </span> 이석훈
+<span>예금주 : </span> [모]송낭섭
 </div>
 </div>
 <div class="group">
 <div>
-<input name="BBankNum1" id="BBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+<input name="BBankNum1" id="BBankNum1" class="input" readonly value="805910-09-973807"><button type="button" class="btn" onclick="jsCopyLink('80591009973807', 'accountCopyB', '3')">복사</button>
 </div>
 </div>
 <div class="group col-2">
@@ -855,12 +700,12 @@ it`s card
 국민은행
 </div>
 <div>
-<span>예금주 : </span> 이석훈
+<span>예금주 : </span> 한유빈
 </div>
 </div>
 <div class="group">
 <div>
-<input name="BBankNum2" id="BBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn">복사</button>
+<input name="BBankNum2" id="BBankNum2" class="input" readonly value="695002-01-219191"><button type="button" class="btn" onclick="jsCopyLink('69500201219191', 'accountCopyB', '4')">복사</button>
 </div>
 </div>			
 </form>
@@ -870,7 +715,7 @@ it`s card
 </div>
 </div>
 
-<div class="pop-wrap copyComplete" id="copyComplete">
+<div class="pop-wrap copyComplete" id="copyComplete1">
 <div class="pop-inner">
 <div class="pop-body">
 <div class="form">
@@ -880,13 +725,85 @@ it`s card
 <div>
 <div class="tit">계좌번호가 복사되었습니다.</div>
 <div class="bkinfo">
-<span>국민은행 000-123-456789</span><br><span>예금주 이석훈</span>
+<span>농협 281-12-283710</span><br><span>예금주 박소현</span>
 </div>
 </div>
 </div>
 </div>
 <div class="buttons">	
-<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete')">확인</a>						
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete1')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pop-wrap copyComplete" id="copyComplete2">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">계좌번호가 복사되었습니다.</div>
+<div class="bkinfo">
+<span>우리은행 1002-633-915014</span><br><span>예금주 성청하</span>
+</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete2')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pop-wrap copyComplete" id="copyComplete3">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">계좌번호가 복사되었습니다.</div>
+<div class="bkinfo">
+<span>국민은행 805910-09-973807</span><br><span>예금주 송낭섭</span>
+</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete3')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pop-wrap copyComplete" id="copyComplete4">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">계좌번호가 복사되었습니다.</div>
+<div class="bkinfo">
+<span>국민은행 695002-01-219191</span><br><span>예금주 한유빈</span>
+</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete4')">확인</a>
 </div>
 </form>
 </div>
@@ -895,44 +812,44 @@ it`s card
 </div>
 
 <script>
-function music_player(){   
-    if ($('#m_off').text()=='stop'){
-        bgmStart('../assets/invitation/music/bgm1.mp3');
-        $('#m_off').text('start');
-        document.getElementById('m_on').src="../assets/invitation/img/music_01_on.png" 
-    }else{
-        bgmStop();
-        $('#m_off').text('stop')
-            document.getElementById('m_on').src="../assets/invitation/img/music_01_off.png" 
-    }
+function music_player(){
+  if ($('#m_off').text()=='stop'){
+    bgmStart('../assets/invitation/music/bgm1.mp3');
+    $('#m_off').text('start');
+    document.getElementById('m_on').src="../assets/invitation/img/music_01_on.png" 
+  }else{
+    bgmStop();
+    $('#m_off').text('stop')
+    document.getElementById('m_on').src="../assets/invitation/img/music_01_off.png" 
+}
 }
 
 function bgmStart(link){
-    if ( window.HTMLAudioElement ) {
-        audio = $('audio');
-        audio[0].src = link;
-        audio[0].load();
-        audio[0].play();
-        //alert("audio");
-    }else{
-        //ie_player.setBGM(link);
-        //alert(ie_player.src);
-        setTimeout("ie_player.bgmPlay()", 100);	
-        //alert("ifrm");
-    }
+  if ( window.HTMLAudioElement ) {
+    audio = $('audio');
+    audio[0].src = link;
+    audio[0].load();
+    audio[0].play();
+    //alert("audio");
+  }else{
+    //ie_player.setBGM(link);
+    //alert(ie_player.src);
+    setTimeout("ie_player.bgmPlay()", 100);	
+    //alert("ifrm");
+  }
 }
 
 function bgmStop(){
-    if ( window.HTMLAudioElement ) {
-        audio = $('audio');
-        audio[0].pause();
-    }else{
-        ie_player.bgmStop();
-    }
+  if ( window.HTMLAudioElement ) {
+    audio = $('audio');
+    audio[0].pause();
+  }else{
+    ie_player.bgmStop();
+  }
 }
 
 // BGM
-//music_player();
+music_player();
 
 // 팝업갤러리
 popGallery();
@@ -951,7 +868,7 @@ if($(".visual-section").outerHeight() - 50 <= $(window).scrollTop()){
 // 다음 지도
 // daumMap(37.546303, 127.048160);
 
-function jsCopyLink(copyText, id) {            
+function jsCopyLink(copyText, id, complete_id) {
     var tmpTextarea = document.createElement('textarea');
     tmpTextarea.value = copyText;
 
@@ -962,9 +879,8 @@ function jsCopyLink(copyText, id) {
     document.execCommand('copy');
     document.body.removeChild(tmpTextarea);
     popClose(id);
-    popOpen('0 1rem','copyComplete');			
+    popOpen('0 1rem','copyComplete'+complete_id);
     //alert("URL 복사가 완료되었습니다."); 					  
 }
 </script>
 
-</body>

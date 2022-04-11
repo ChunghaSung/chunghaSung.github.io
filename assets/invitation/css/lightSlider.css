@@ -169,11 +169,11 @@
     transition: all 0.35s ease;
 }
 .lSAction > .lSPrev {
-    background-image:url("/mobile/new_m/mcard/images/common/gallery_prev_type1.png");
+    background-image:url("../img/gallery_prev_type1.png");
     left: -1.500rem;
 }
 .lSAction > .lSNext {
-    background-image:url("/mobile/new_m/mcard/images/common/gallery_next_type1.png");
+    background-image:url("../img/gallery_next_type1.png");
     right: -1.500rem;
 }
 .lSAction > a.disabled {

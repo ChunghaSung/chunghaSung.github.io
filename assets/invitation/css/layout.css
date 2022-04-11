@@ -96,7 +96,7 @@
 	margin:0 0.625rem;
 	height:1.250rem;
 	width:0.500rem;
-	background:url('/mobile/new_m/mcard/images/mcard_29/bar_01.png') center center no-repeat;
+	background:url('../img/bar_01.png') center center no-repeat;
 	background-size:0.500rem;
 	letter-spacing:0;
 }
@@ -333,7 +333,7 @@
 	line-height:0.938rem;
 	color:#7c6a52;
 	padding-bottom:1.250rem;
-	background:url("/mobile/new_m/mcard/images/mcard_31/bar_01.png") center bottom 0.375rem no-repeat;
+	background:url("../img/bar_01.png") center bottom 0.375rem no-repeat;
 	background-size:0.438rem auto;
 	white-space:nowrap;
 }
@@ -4245,7 +4245,7 @@
 	font-size:0.813rem;
 	line-height:1.313rem;
 	color:#7b5656;
-	background:url("/mobile/new_m/mcard/images/mcard_51/wedding_day.png") center bottom 1px no-repeat;
+	background:url("../img/wedding_day.png") center bottom 1px no-repeat;
 	background-size:8.750rem auto;
 	letter-spacing:0.05em;
 }
