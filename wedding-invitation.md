@@ -7,12 +7,12 @@ title: wedding-invitation
 <head>
 
 <meta charset="utf-8">
-<title> 청하 유빈 모바일 청첩장</title>
+<title> 성청하♡한유빈의 모바일청첩장입니다. </title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi" />
 <meta name="format-detection" content="telephone=no" />
 <meta property="og:type" content="website">
 <meta property="og:image" content="../assets/invitation/img/church-1.jpeg"> <!-- Link Image -->
-<meta property="og:title" content="청하 유빈 모바일청첩장"> <!-- Link Title -->
+<meta property="og:title" content="성청하♡한유빈의 모바일청첩장"> <!-- Link Title -->
 <meta property="og:description" content="우리 결혼합니다"> <!-- Link Text -->
 <meta property="og:url" content="https://chunghasung.org/wedding-invitation"> <!-- Link URL -->
 <link rel="stylesheet" type="text/css" href="../assets/invitation/css/kopubbatang.css" /> <!-- font-family: 'KoPub Batang'; -->
@@ -393,7 +393,7 @@ function kakao_navi(){
 
 <dl>
 <dt>기타안내</dt>
-<dd>화환은 정중히 사양합니다.</dd>
+<dd>성당에서 화환은 받지 않습니다.</dd>
 </dl>
 </div>
 </div>
@@ -498,13 +498,48 @@ function kakao_navi(){
 <footer id="footer">
 <div class="foot-share">
 <ul class="foot-share-list">
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript">
+Kakao.init('737a3cae95b26343dafe836be8857dbb');
+function kakaosendLink() {
+  Kakao.Link.sendDefault({
+  objectType: 'feed',
+  content: {
+    title: '성청하♡한유빈의 모바일청첩장입니다',
+    description: '우리 결혼합니다',
+    imageUrl:
+      'https://chunghasung.org/wedding-invitation/assets/invitation/img/church-2.jpeg',
+    link: {
+      mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
+      webUrl: 'https://chunghasung.org/wedding-invitation',
+    }
+  },
+  buttons: [
+   {
+     title: '웹으로 보기',
+     link: {
+       mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
+       webUrl: 'https://chunghasung.org/wedding-invitation',
+     }
+   },
+   {
+     title: '앱으로 보기',
+       link: {
+        mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
+        webUrl: 'https://chunghasung.org/wedding-invitation',
+       }
+    }
+  ]
+ });
+}
+</script>
 <li>
-<a href="javascript:pcAlert();" class="kakao">
+<a onclick="kakaosendLink();" class="kakao">
 카카오톡<br> 공유하기
 </a>
 </li>
 <li>
-<a href="javascript:pcAlert();" class="facebook">
+<a target=_blank href="http://m.facebook.com/sharer.php?u=http://chunghasung.org/wedding-invitation" class="facebook">
 페이스북<br> 공유하기
 </a>
 </li>
