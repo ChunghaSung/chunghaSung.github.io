@@ -201,41 +201,41 @@ title: wedding-invitation
 <section class="gallery-section type3">
 <div class="sec-tit">" 하나되는 날 "</div>
 <div class="contain">
-<ul class="type2-list">
-<li onclick="galleryPOP('open', 'type2', 1);">
+<ul class="type3-list">
+<li onclick="galleryPOP('open', 'type3', 1);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-1.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 2);">
+<li onclick="galleryPOP('open', 'type3', 2);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 3);">
+<li onclick="galleryPOP('open', 'type3', 3);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 4);">
+<li onclick="galleryPOP('open', 'type3', 4);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 5);">
+<li onclick="galleryPOP('open', 'type3', 5);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 6);">
+<li onclick="galleryPOP('open', 'type3', 6);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 7);">
+<li onclick="galleryPOP('open', 'type3', 7);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 8);">
+<li onclick="galleryPOP('open', 'type3', 8);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 9);">
+<li onclick="galleryPOP('open', 'type3', 9);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 10);">
+<li onclick="galleryPOP('open', 'type3', 10);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 11);">
+<li onclick="galleryPOP('open', 'type3', 11);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
-<li onclick="galleryPOP('open', 'type2', 12);">
+<li onclick="galleryPOP('open', 'type3', 12);">
 <div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
 </li>
 </ul>
@@ -500,7 +500,7 @@ function kakaosendLink() {
 }
 </script>
 <li>
-<a onclick="kakaosendLink();" class="kakao">
+<a target=_black href="#" onclick="kakaosendLink();" class="kakao">
 카카오톡<br> 공유하기
 </a>
 </li>
@@ -852,6 +852,27 @@ function kakaosendLink() {
 </div>
 </div>
 
+<div class="pop-wrap copyComplete" id="register">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">축하메시지가 등록되었습니다.</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('register')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
 <script type="text/javascript">
 
@@ -903,7 +924,7 @@ function deleteComment() {
             "Purpose": { S: hash},
             "Date": { S: deleteDate},
         },
-
+        ReturnValues: "ALL_OLD"
         
     };
     client.deleteItem(params, function(tableErr, tableData) {
@@ -914,10 +935,12 @@ function deleteComment() {
                 alert("비밀번호가 일치하지 않습니다.");
             } else {
                 console.log("Delete Item successfully!");
-                loadContents();
                 popClose('messageDelete');
+                loadContents();
             }
         }
+        // clear password form
+        document.getElementById("deleteCom").value = "";
     });
 
 }
@@ -942,9 +965,19 @@ function loadContents() {
                     txt: ele["txt"]["S"]
                 })
             );
+            console.log(contentObj);
+            contentObj = contentObj.sort((a, b) => a["date"] > b["date"]);
+            console.log(contentObj);
             contentObj = contentObj.reverse();
             countOfPages = getCountOfPages();
+            if (presentPage > countOfPages) {
+                presentPage = countOfPages;
+            }
             loadMyPaginationList();
+            // clear the form
+            document.getElementById("commentName").value = "";
+            document.getElementById("commentPass").value = "";
+            document.getElementById("commentContents").value = "";
         }
     });
 }
@@ -979,7 +1012,6 @@ function putContents() {
             Purpose: { S: hash},
             Date: { S: current},
             Name: { S: name},
-            Pasword: {S: pass},
             txt: { S: contents }
         }
     };
@@ -992,9 +1024,10 @@ function putContents() {
             console.log("Put Item successfully!");
             presentPage = 1;
             loadContents();
+            popOpen('0 1rem', 'register');
         }
     });
-
+    
 }
 
 //function for creating how many how many number per each page

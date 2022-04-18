@@ -189,10 +189,6 @@ body:not(.showfocus) .player input {
  font-size:10px;
  overflow:visible;
  border-collapse:separate;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none;
  -ms-touch-action:manipulate;
  touch-action:manipulate
 }
@@ -656,10 +652,6 @@ body:not(.showfocus) .player input {
  left:0;
  right:0;
  padding:0 10px 10px;
- -webkit-user-select:text;
- -moz-user-select:text;
- -ms-user-select:text;
- user-select:text;
  -webkit-transform:translateY(0);
  transform:translateY(0);
  -webkit-transition:-webkit-transform 250ms ease-out .2s;
@@ -2350,10 +2342,6 @@ body:not(.showfocus) .player input {
  width:300px;
  padding:10px;
  margin:10px 0 0 10px;
- -webkit-user-select:text;
- -moz-user-select:text;
- -ms-user-select:text;
- user-select:text;
  font-size:1.2em;
  line-height:1;
  top:0
@@ -2591,10 +2579,6 @@ body:not(.showfocus) .player input {
  margin:0
 }
 .player .vp-share-footnote--share a {
- -webkit-user-select:text;
- -moz-user-select:text;
- -ms-user-select:text;
- user-select:text;
  color:#fff
 }
 .player .vp-share-embedCode {
@@ -4953,10 +4937,6 @@ body:not(.showfocus) .player input {
  margin:0 .25em
 }
 .player .vp-overlay-wrapper .footnote.share a {
- -webkit-user-select:text;
- -moz-user-select:text;
- -ms-user-select:text;
- user-select:text;
  color:#fff
 }
 .player .vp-overlay-wrapper .footnote a.clip-url {
@@ -5153,10 +5133,6 @@ body:not(.showfocus) .player input {
  max-width:800px
 }
 .player .vp-overlay-content.error {
- -webkit-user-select:text;
- -moz-user-select:text;
- -ms-user-select:text;
- user-select:text
 }
 .player .vp-overlay-icon-wrapper {
  position:absolute;
@@ -5873,7 +5849,6 @@ body:not(.showfocus) .player input {
  flex:0 0 100%;
  min-width:0;
  cursor:pointer;
- -webkit-user-drag:none
 }
 .player.player-cardsCorner .card {
  position:absolute;
@@ -5916,15 +5891,9 @@ body:not(.showfocus) .player input {
 .player .card--contentInfo .card-image {
  border-radius:50%;
  height:40px;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none;
- -webkit-user-drag:none
 }
 .player .card-link {
  color:#fff;
- -webkit-user-drag:none
 }
 .player .card-inner {
  float:right;
@@ -5953,43 +5922,24 @@ body:not(.showfocus) .player input {
  -webkit-box-align:center;
  -ms-flex-align:center;
  align-items:center;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none;
- -webkit-user-drag:none
 }
 .player.player-cardsCorner .card-imageWrap {
  -ms-flex-preferred-size:auto;
  flex-basis:auto;
  height:100%;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player .cards-wrapper--withThumbnails .card-imageWrap {
  display:-webkit-box;
  display:-ms-flexbox;
  display:flex;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player .card-image {
  display:block;
  height:56px;
  width:auto;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none;
- -webkit-user-drag:none
 }
 .player.player-cardsCorner .card-image {
  height:100%;
- -webkit-user-drag:none
 }
 .player .card-body {
  width:100%;
@@ -6010,10 +5960,6 @@ body:not(.showfocus) .player input {
  padding:4px 10px;
  border-top-right-radius:5px;
  border-bottom-right-radius:5px;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player.player-cardsCorner .card-body {
  padding:10px;
@@ -6025,10 +5971,6 @@ body:not(.showfocus) .player input {
  margin:0;
  font-size:1.4em;
  line-height:1.1428571429em;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player .card-text--title {
  overflow:hidden;
@@ -6041,10 +5983,6 @@ body:not(.showfocus) .player input {
  margin-bottom:1px;
  line-height:1.2857142857em;
  color:#fff;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player.player-cardsCorner .card-text--title {
  margin-bottom:0
@@ -6054,10 +5992,6 @@ body:not(.showfocus) .player input {
  overflow:hidden;
  text-overflow:ellipsis;
  min-width:0;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player .card-arrow {
  -webkit-box-flex:0;
@@ -6077,10 +6011,6 @@ body:not(.showfocus) .player input {
  max-height:26px;
  color:#a2afb8;
  font-size:1.2em;
- -webkit-user-select:none;
- -moz-user-select:none;
- -ms-user-select:none;
- user-select:none
 }
 .player.player-cardsCorner .card-text--detail {
  margin-top:6px;
