@@ -25,5 +25,9 @@
     "gulp",
     "sass",
     "browsersync"
-  ]
+  ],
+  "dependencies": {
+    "firebase": "^9.6.11",
+    "object-hash": "^3.0.0"
+  }
 }

@@ -29,6 +29,7 @@ title: wedding-invitation
 <script type="text/javascript" src="../assets/invitation/js/lightSlider.js"></script>
 <script type="text/javascript" src="../assets/invitation/js/jquery.rwdImageMaps.min.js"></script>
 <script type="text/javascript" src="../assets/invitation/js/common.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/object_hash.js"></script>
 </head>
 <body class="mcard_31">
 <div class="wrapper">
@@ -430,68 +431,33 @@ function kakao_navi(){
 <form action="">
 <div class="group col-2 first">
 <div>
-<input type="text" name="" id="" class="input" placeholder="이름">
+<input type="text" name="" id="commentName" class="input" placeholder="이름">
 </div>
 <div>
-<input type="password" name="" id="" class="input" placeholder="비밀번호">
+<input type="password" name="" id="commentPass" class="input" placeholder="비밀번호">
 </div>
 </div>
 <div class="group">
 <div>
-<textarea name="" id="" class="textarea"></textarea>
+<textarea name="" id="commentContents" class="textarea"></textarea>
 </div>
 </div>
 <div class="buttons">
-<button type="button" class="btn submit">등록하기</button>
+<button type="button" class="btn submit" onclick="putContents();">등록하기</button>
 </div>
 </form>
 </div>
 
-<div class="comment">
-<ul class="comment-list">
-<li class="list">
-<div class="tit">
-<span class="name">홍진경</span>
-<span class="date">2022.01.01.13:13:10</span>
-</div>
-<p class="txt">
-결혼축하해~결혼식에서 보자!!ㅎㅎ
-</p>
-<a href="javascript:void(0);" class="delete-btn" onclick="popOpen('0 1rem','messageDelete')">댓글삭제</a>
-</li>
-<li class="list">
-<div class="tit">
-<span class="name">이진아</span>
-<span class="date">2022.01.01.13:13:10</span>
-</div>
-<p class="txt">
-사진 너무 예쁘다! 행복하게 살아야해 :)
-</p>
-<a href="javascript:void(0);" class="delete-btn" onclick="popOpen('0 1rem','messageDelete')">댓글삭제</a>
-</li>
-<li class="list">
-<div class="tit">
-<span class="name">이이경</span>
-<span class="date">2022.01.01.13:13:10</span>
-</div>
-<p class="txt">
-축의금은 미리 보내요^^
-</p>
-<a href="javascript:void(0);" class="delete-btn" onclick="popOpen('0 1rem','messageDelete')">댓글삭제</a>
-</li>
+
+<div class="comment" id="comment">
+<ul class="comment-list" id="comment-list">
 </ul>
 </div>
 
-<div class="paging">
-<a href="javascript:;" class="prev" onclick="goPrePage();">&lt;</a>
-<a href="javascript:void(0);" class="on">1</a>
-<a href="javascript:void(0);">2</a>
-<a href="javascript:void(0);">3</a>
-<a href="javascript:void(0);">4</a>
-<a href="javascript:void(0);">5</a>
-<a href="javascript:;" class="next" onclick="goNextPage();">&gt;</a>
+<div class="paging" id="paging">
 </div>
 </section>
+
 <!-- 메시지 //-->
 
 <!--// 푸터 -->
@@ -676,13 +642,13 @@ function kakaosendLink() {
 <div class="con">
 <div class="group">
 <div>
-<input type="password" name="" id="" class="input" placeholder="password">
+<input type="password" name="" id="deleteCom" class="input" placeholder="password">
 </div>
 </div>
 </div>
 <div class="buttons">
 <a href="javascript:void(0);" class="btn" onclick="popClose('messageDelete')">취소</a>
-<button type="button" class="btn">확인</button>
+<button type="button" class="btn" onclick="deleteComment();">확인</button>
 </div>
 </form>
 </div>
@@ -885,6 +851,232 @@ function kakaosendLink() {
 </div>
 </div>
 </div>
+
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+<script type="text/javascript">
+
+var contentObj = new Array();
+
+var commentList = document.getElementById("comment-list")
+
+var countPerEachPage = 2;
+var countOfPages = 0;
+var presentPage = 1;
+var addPageList = new Array();
+
+// Initialize the Amazon Cognito credentials provider
+AWS.config.region = 'us-west-1'; // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-west-1:488e4513-da93-4e0f-ba39-42fb574a0a13',
+});
+var client = new AWS.DynamoDB();
+
+var tableName = "invitationTable";
+
+
+
+var deleteName = "";
+var deleteDate = "";
+var deleteTxt= "";
+
+function setupDeleteId(n, d, t) {
+
+    deleteName = n;
+    deleteDate = d;
+    deleteTxt = t;
+}
+
+function deleteComment() {
+    var pass = document.getElementById("deleteCom").value;
+
+    var tmp = {
+        Date: { S: deleteDate},
+        Name: { S: deleteName},
+        Pasword: {S: pass}
+    }
+
+    var hash = objectHash.sha1(tmp);
+
+    var params = {
+        TableName: tableName,
+        Key: { 
+            "Purpose": { S: hash},
+            "Date": { S: deleteDate},
+        },
+
+        
+    };
+    client.deleteItem(params, function(tableErr, tableData) {
+        if (tableErr) {
+            console.error("Delete Item Error JSON:", JSON.stringify(tableErr, null, 2));
+        } else {
+            if (jQuery.isEmptyObject(tableData)) {
+                alert("비밀번호가 일치하지 않습니다.");
+            } else {
+                console.log("Delete Item successfully!");
+                loadContents();
+                popClose('messageDelete');
+            }
+        }
+    });
+
+}
+
+function loadContents() {
+    // Set the parameters
+    var params = {
+        TableName: tableName
+    };
+    var scanResults = new Array();
+
+    client.scan(params, function(tableErr, tableData) {
+        if (tableErr) {
+            console.error("Get Item Error JSON:", JSON.stringify(tableErr, null, 2));
+        } else {
+            console.log("Get Item successfully!");
+            contentObj = new Array();
+            tableData.Items.forEach(ele => 
+                contentObj.push({
+                    name: ele["Name"]["S"],
+                    date: ele["Date"]["S"],
+                    txt: ele["txt"]["S"]
+                })
+            );
+            contentObj = contentObj.reverse();
+            countOfPages = getCountOfPages();
+            loadMyPaginationList();
+        }
+    });
+}
+
+function putContents() {
+
+    // get current date
+    var current = new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"})
+
+    // get data
+    var name = document.getElementById("commentName").value
+    var pass = document.getElementById("commentPass").value
+    var contents = document.getElementById("commentContents").value
+
+    if (name == "" || pass == "" || contents == "") {
+        alert("이름, 비밀번호, 내용을 입력해주세요.");
+        return;
+    }
+
+    var tmp = {
+        Date: { S: current},
+        Name: { S: name},
+        Pasword: {S: pass}
+    }
+
+    var hash = objectHash.sha1(tmp);
+
+    // Set the parameters
+    var params = {
+        TableName: tableName,
+        Item: { 
+            Purpose: { S: hash},
+            Date: { S: current},
+            Name: { S: name},
+            Pasword: {S: pass},
+            txt: { S: contents }
+        }
+    };
+
+
+    client.putItem(params, function(tableErr, tableData) {
+        if (tableErr) {
+            console.error("Error JSON:", JSON.stringify(tableErr, null, 2));
+        } else {
+            console.log("Put Item successfully!");
+            presentPage = 1;
+            loadContents();
+        }
+    });
+
+}
+
+//function for creating how many how many number per each page
+function getCountOfPages() {
+    return Math.ceil(contentObj.length / countPerEachPage);
+}
+
+function createEachPage() {
+    var cList = document.getElementById("comment-list")
+    cList.innerHTML = "";
+    for (i=0; i<addPageList.length; i++) {
+        var name = addPageList[i].name;
+        var da = addPageList[i].date;
+        var txt = addPageList[i].txt;
+        var newComment = "<li class = \"list\">"
+        + "<div class = \"tit\">"
+        + "<span class = \"name\" id=\"commentName"+i+"\">" + name + "</span>\n"
+        + "<span class = \"date\" id=\"commentDate"+i+"\">" + da + "</span>"
+        + "</div>"
+        + "<p class = \"txt\" id=\"commentTxt"+i+"\">" + txt + "</p>"
+        + "<a class=\"delete-btn\" id=\"deleteCom"+i+"\" onclick=\"setupDeleteId("+ "'" + name + "'" + ",'" + da + "'," + "'" + txt + "'" + ");popOpen('0 1rem','messageDelete')\">댓글삭제</a>"
+        + "</li>";
+        cList.innerHTML = cList.innerHTML + newComment
+
+    }
+}
+
+function createPages() {
+    var pageList = document.getElementById("paging")
+    pageList.innerHTML = "";
+    var prev = "<a class=\"prev\" onclick=\"goPrev();\">&lt;</a>"
+    var next = "<a class=\"next\" onclick=\"goNext();\">&gt;</a>"
+    var pages = ""
+    for (i=1; i<=countOfPages; i++) {
+        if (presentPage == i) {
+            pages += "<a onclick=\"gotoPage(" + i + ")\" class=\"on\">" + i + "</a>"
+        } else {
+            pages += "<a onclick=\"gotoPage(" + i + ")\">" + i + "</a>"
+        }
+    }
+    if (pages != "") {
+        pageList.innerHTML = pageList.innerHTML + prev + pages + next;
+    }
+}
+
+
+
+
+function loadMyPaginationList() {
+    var start = ((presentPage - 1) * countPerEachPage);
+    var end = start + countPerEachPage;
+    addPageList = contentObj.slice(start, end);
+    createEachPage();
+    // create pages
+    createPages();
+}
+
+
+function gotoPage(pageNumber) {
+    if (pageNumber >= 1 && pageNumber <= countOfPages) {
+        presentPage = pageNumber
+        loadMyPaginationList();
+    }
+}
+
+function goNext() {
+    if (presentPage < countOfPages) {
+        presentPage += 1;
+    }
+    loadMyPaginationList();
+}
+
+function goPrev() {
+    if (presentPage > 1) {
+        presentPage -= 1;
+    }
+    loadMyPaginationList();
+}
+
+window.onload = loadContents;
+
+</script>
 
 <script>
 function music_player(){
