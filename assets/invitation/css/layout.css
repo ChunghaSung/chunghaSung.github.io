@@ -321,7 +321,7 @@
 .mcard_31 .visual-section .vertical-item.tit{
 	z-index:10;
 	position:absolute;
-	left:50%; top:5.000rem;
+	left:50%; top:4.000rem;
 	width:auto;
 	padding:0.938rem 0.625rem 1.250rem;
 	background:rgba(255, 255, 255, .6);
@@ -329,7 +329,7 @@
 }
 .mcard_31 .visual-section .vertical-item.tit .p1{
 	font-size:0.688rem;
-	font-weight:300;
+	font-weight:500;
 	line-height:0.938rem;
 	color:#7c6a52;
 	padding-bottom:1.250rem;
@@ -339,7 +339,7 @@
 }
 .mcard_31 .visual-section .vertical-item.tit .p2{
 	font-size:1rem;
-	font-weight:400;
+	font-weight:500;
 	line-height:1.500rem;
 	color:#414141;
 }

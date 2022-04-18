@@ -53,6 +53,7 @@ title: wedding-invitation
 <div class="vertical-item tit" id="hello">
 <p class="p2">
 성청하<br>
+❤<br>
 한유빈
 </p>
 </div>
@@ -876,7 +877,7 @@ var contentObj = new Array();
 
 var commentList = document.getElementById("comment-list")
 
-var countPerEachPage = 2;
+var countPerEachPage = 5;
 var countOfPages = 0;
 var presentPage = 1;
 var addPageList = new Array();
