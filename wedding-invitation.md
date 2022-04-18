@@ -665,12 +665,12 @@ function kakaosendLink() {
 농협
 </div>
 <div>
-<span>예금주 : </span> [모]박소현
+<span>예금주 : </span> [부]성광현
 </div>
 </div>
 <div class="group">
 <div>
-<input name="GBankNum1" id="GBankNum1" class="input" readonly value="281-12-283710"><button type="button" class="btn" onclick="jsCopyLink('28112283710', 'accountCopyG', '1')">복사</button>
+<input name="GBankNum1" id="GBankNum1" class="input" readonly value="281-12-283710"><button type="button" class="btn" onclick="jsCopyLink('25312008865', 'accountCopyG', '1')">복사</button>
 </div>
 </div>
 <div class="group col-2">
@@ -763,7 +763,7 @@ function kakaosendLink() {
 <div>
 <div class="tit">계좌번호가 복사되었습니다.</div>
 <div class="bkinfo">
-<span>농협 281-12-283710</span><br><span>예금주 박소현</span>
+<span>농협 253-12-008865</span><br><span>예금주 성광현</span>
 </div>
 </div>
 </div>
@@ -962,8 +962,7 @@ function loadContents() {
                     txt: ele["txt"]["S"]
                 })
             );
-            contentObj = contentObj.sort((a, b) => a["date"] > b["date"]);
-            contentObj = contentObj.reverse();
+            contentObj = contentObj.sort((a, b) => a["date"] < b["date"]);
             countOfPages = getCountOfPages();
             if (presentPage > countOfPages) {
                 presentPage = countOfPages;
@@ -1144,7 +1143,7 @@ function bgmStart(link){
   }else{
     //ie_player.setBGM(link);
     //alert(ie_player.src);
-    setTimeout("ie_player.bgmPlay()", 100);	
+    setTimeout("ie_player.bgmPlay()", 245);	
     //alert("ifrm");
   }
 }
