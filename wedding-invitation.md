@@ -50,14 +50,10 @@ title: wedding-invitation
 <!--// 비주얼 -->
 <section class="visual-section">
 <div class="vertical-top">
-<div class="vertical-item tit">
-<p class="p1">
-우리 결혼<br>
-합니다
-</p>
+<div class="vertical-item tit" id="hello">
 <p class="p2">
-<span class="vs-span">성청하</span>
-<span class="vs-span">한유빈</span>
+성청하<br>
+한유빈
 </p>
 </div>
 <div class="vertical-item photo">
@@ -965,9 +961,7 @@ function loadContents() {
                     txt: ele["txt"]["S"]
                 })
             );
-            console.log(contentObj);
             contentObj = contentObj.sort((a, b) => a["date"] > b["date"]);
-            console.log(contentObj);
             contentObj = contentObj.reverse();
             countOfPages = getCountOfPages();
             if (presentPage > countOfPages) {
@@ -1107,9 +1101,24 @@ function goPrev() {
     loadMyPaginationList();
 }
 
-window.onload = loadContents;
+window.onload = startup;
+function startup() {
+    getDday();
+    loadContents();
+}
+
+function getDday() {
+    // d-day caculator
+    var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
+    var weddingDate = new Date("2022", "5", "24");
+    var oneDay = 86400000;
+    var dday = Math.round(Math.abs(current - weddingDate)/oneDay);
+    var hello = document.getElementById("hello");
+    hello.innerHTML = "<p class=\"p1\">\n" + "우리 결혼<br>" + "합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
+}
 
 </script>
+
 
 <script>
 function music_player(){
