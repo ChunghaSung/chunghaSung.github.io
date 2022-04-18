@@ -670,7 +670,7 @@ function kakaosendLink() {
 </div>
 <div class="group">
 <div>
-<input name="GBankNum1" id="GBankNum1" class="input" readonly value="281-12-283710"><button type="button" class="btn" onclick="jsCopyLink('25312008865', 'accountCopyG', '1')">복사</button>
+<input name="GBankNum1" id="GBankNum1" class="input" readonly value="253-12-008865"><button type="button" class="btn" onclick="jsCopyLink('25312008865', 'accountCopyG', '1')">복사</button>
 </div>
 </div>
 <div class="group col-2">
