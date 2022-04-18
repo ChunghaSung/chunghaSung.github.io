@@ -299,7 +299,7 @@ infowindow.open(map, marker);
 <a target="_blank" class="tmap" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx3a68a3c58b74417cbd7410f35f042b08&name=천주교중림동약현성당&lon=126.96697441028365&lat=37.559081953946645">티맵</a>
 </li>
 <li>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d6cc107b2a366895e22e0ba2626f4df2&libraries=services,clusterer,drawing"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type='text/javascript'>
 Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
@@ -463,7 +463,7 @@ function kakao_navi(){
 <ul class="foot-share-list">
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script type="text/javascript">
-Kakao.init('737a3cae95b26343dafe836be8857dbb');
+Kakao.init('d6cc107b2a366895e22e0ba2626f4df2');
 function kakaosendLink() {
   Kakao.Link.sendDefault({
   objectType: 'feed',
