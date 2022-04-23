@@ -485,7 +485,7 @@ function kakaosendLink() {
     title: '성청하♡한유빈의 모바일청첩장입니다',
     description: '우리 결혼합니다',
     imageUrl:
-      'https://chunghasung.org/wedding-invitation/assets/invitation/img/church-2.jpeg',
+      'https://chunghasung.org/wedding-invitation/assets/invitation/img/main.jpeg',
     link: {
       mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
       webUrl: 'https://chunghasung.org/wedding-invitation',
@@ -949,8 +949,24 @@ function kakaosendLink() {
 </div>
 </div>
 
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+<script type="text/javascript" src="../assets/invitation/js/apiGateway-js-sdk/apigClient.js"></script>
 <script type="text/javascript">
+
+
+var apigClient = apigClientFactory.newClient({
+  apiKey: 'FHH0oiQPSI7m0qic6XUCs4IHlvCHm0OS6KPlHPIT'
+});
+
 
 var contentObj = new Array();
 
@@ -961,26 +977,13 @@ var countOfPages = 0;
 var presentPage = 1;
 var addPageList = new Array();
 
-// Initialize the Amazon Cognito credentials provider
-AWS.config.region = 'us-west-1'; // Region
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-west-1:488e4513-da93-4e0f-ba39-42fb574a0a13',
-});
-var client = new AWS.DynamoDB();
-
-var tableName = "invitationTable";
-
-
-
 var deleteName = "";
 var deleteDate = "";
 var deleteTxt= "";
 
-function setupDeleteId(n, d, t) {
-
+function setupDeleteId(n, d) {
     deleteName = n;
     deleteDate = d;
-    deleteTxt = t;
 }
 
 function deleteComment() {
@@ -994,65 +997,59 @@ function deleteComment() {
 
     var hash = objectHash.sha1(tmp);
 
-    var params = {
-        TableName: tableName,
-        Key: { 
-            "Purpose": { S: hash},
-            "Date": { S: deleteDate},
-        },
-        ReturnValues: "ALL_OLD"
-        
+    var body = {
+        "command": "DELETE",
+        "hash": hash,
+        "date": deleteDate
     };
-    client.deleteItem(params, function(tableErr, tableData) {
-        if (tableErr) {
-            console.error("Delete Item Error JSON:", JSON.stringify(tableErr, null, 2));
+    apigClient.invitationPut({}, body, {})
+    .then(function(result) {
+        console.log(result);
+        if (jQuery.isEmptyObject(result.data)) {
+            alert("비밀번호가 일치하지 않습니다.");
         } else {
-            if (jQuery.isEmptyObject(tableData)) {
-                alert("비밀번호가 일치하지 않습니다.");
-            } else {
-                console.log("Delete Item successfully!");
-                popClose('messageDelete');
-                loadContents();
-            }
+            console.log("Delete Item successfully!");
+            popClose('messageDelete');
+            loadContents();
         }
         // clear password form
         document.getElementById("deleteCom").value = "";
+    }).catch(function(result) {
+        //console.log(result);
+        console.log("delete fail");
     });
-
 }
 
-function loadContents() {
-    // Set the parameters
-    var params = {
-        TableName: tableName
-    };
-    var scanResults = new Array();
 
-    client.scan(params, function(tableErr, tableData) {
-        if (tableErr) {
-            console.error("Get Item Error JSON:", JSON.stringify(tableErr, null, 2));
-        } else {
-            console.log("Get Item successfully!");
-            contentObj = new Array();
-            tableData.Items.forEach(ele => 
-                contentObj.push({
-                    name: ele["Name"]["S"],
-                    date: ele["Date"]["S"],
-                    txt: ele["txt"]["S"]
-                })
-            );
-            contentObj = contentObj.sort((a, b) => a["date"] < b["date"]);
-            countOfPages = getCountOfPages();
-            if (presentPage > countOfPages) {
-                presentPage = countOfPages;
-            }
-            loadMyPaginationList();
-            // clear the form
-            document.getElementById("commentName").value = "";
-            document.getElementById("commentPass").value = "";
-            document.getElementById("commentContents").value = "";
+function loadContents() {
+    var body = {
+        "command": "GET"
+    };
+
+    apigClient.invitationPut({}, body, {})
+    .then(function(result) {
+        console.log("Get Item successfully!");
+        contentObj = new Array();
+        result.data.forEach(ele => 
+            contentObj.push({
+                name: ele["name"],
+                date: ele["date"],
+                txt: ele["txt"]
+            })
+        );
+        countOfPages = getCountOfPages();
+        if (presentPage > countOfPages) {
+            presentPage = countOfPages;
         }
+        loadMyPaginationList();
+        // clear the form
+        document.getElementById("commentName").value = "";
+        document.getElementById("commentPass").value = "";
+        document.getElementById("commentContents").value = "";
+    }).catch(function(result) {
+        console.error("Get Item Error JSON:", JSON.stringify(result, null, 2));
     });
+
 }
 
 function putContents() {
@@ -1078,29 +1075,24 @@ function putContents() {
 
     var hash = objectHash.sha1(tmp);
 
-    // Set the parameters
-    var params = {
-        TableName: tableName,
-        Item: { 
-            Purpose: { S: hash},
-            Date: { S: current},
-            Name: { S: name},
-            txt: { S: contents }
-        }
+    var body = {
+        "command": "PUT",
+        "hash": hash,
+        "name": name,
+        "date": current,
+        "txt": contents
     };
 
-
-    client.putItem(params, function(tableErr, tableData) {
-        if (tableErr) {
-            console.error("Error JSON:", JSON.stringify(tableErr, null, 2));
-        } else {
-            console.log("Put Item successfully!");
-            presentPage = 1;
-            loadContents();
-            popOpen('0 1rem', 'register');
-        }
+    apigClient.invitationPut({}, body, {})
+    .then(function(result) {
+        console.log(result);
+        console.log("Put Item successfully!");
+        presentPage = 1;
+        loadContents();
+        popOpen('0 1rem', 'register');
+    }).catch(function(result) {
+        console.error("Put Item Error JSON:", JSON.stringify(result, null, 2));
     });
-    
 }
 
 //function for creating how many how many number per each page
@@ -1121,7 +1113,7 @@ function createEachPage() {
         + "<span class = \"date\" id=\"commentDate"+i+"\">" + da + "</span>"
         + "</div>"
         + "<p class = \"txt\" id=\"commentTxt"+i+"\">" + txt + "</p>"
-        + "<a class=\"delete-btn\" id=\"deleteCom"+i+"\" onclick=\"setupDeleteId("+ "'" + name + "'" + ",'" + da + "'," + "'" + txt + "'" + ");popOpen('0 1rem','messageDelete')\">댓글삭제</a>"
+        + "<a class=\"delete-btn\" id=\"deleteCom"+i+"\" onclick=\"setupDeleteId("+ "'" + name + "'" + ",'" + da + "');popOpen('0 1rem','messageDelete')\">댓글삭제</a>"
         + "</li>";
         cList.innerHTML = cList.innerHTML + newComment
 
