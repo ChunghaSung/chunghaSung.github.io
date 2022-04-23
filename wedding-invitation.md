@@ -205,40 +205,49 @@ title: wedding-invitation
 <div class="contain">
 <ul class="type3-list">
 <li onclick="galleryPOP('open', 'type3', 1);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-1.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap1.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 2);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap2.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 3);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap3.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 4);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap4.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 5);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap5.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 6);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap6.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 7);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap7.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 8);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap8.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 9);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap9.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 10);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap10.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 11);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap11.jpeg);"></div>
 </li>
 <li onclick="galleryPOP('open', 'type3', 12);">
-<div class="box" style="background-image:url(../assets/invitation/img/church-2.jpeg);"></div>
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap12.jpeg);"></div>
+</li>
+<li onclick="galleryPOP('open', 'type3', 13);">
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap13.jpeg);"></div>
+</li>
+<li onclick="galleryPOP('open', 'type3', 14);">
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap14.jpeg);"></div>
+</li>
+<li onclick="galleryPOP('open', 'type3', 15);">
+<div class="box" style="background-image:url(../assets/invitation/img/snap/snap15.jpeg);"></div>
 </li>
 </ul>
 <p class="ex">이미지를 클릭하시면 확대보기가 가능합니다.</p>
@@ -522,110 +531,137 @@ function kakaosendLink() {
 </div>
 <div class="pop-body">
 <ul id="pop-gallery" class="gallery list-unstyled cS-hidden roll_type01">
-<li data-thumb="../assets/invitation/img/church-1.jpeg">
+<li data-thumb="../assets/invitation/img/snap/snap1.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="../assets/invitation/img/church-1.jpeg" />
+<img src="../assets/invitation/img/snap/snap1.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/church-2.jpeg">
+<li data-thumb="../assets/invitation/img/snap/snap2.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="../assets/invitation/img/church-2.jpeg" />
+<img src="../assets/invitation/img/snap/snap2.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_03.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap3.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_03.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap3.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_04.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap4.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_04.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap4.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_05.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap5.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_05.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap5.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_06.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap6.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_06.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap6.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_07.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap7.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_07.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap7.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_08.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap8.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_08.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap8.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_09.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap9.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_09.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap9.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_10.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap10.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_10.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap10.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_11.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap11.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_11.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap11.jpeg" />
 </div>
 </div>
 </div>
 </li>
-<li data-thumb="/mobile/new_m/mcard/images/common/gallery_sample_12.jpg?v=0.0.1">
+<li data-thumb="../assets/invitation/img/snap/snap12.jpeg">
 <div class="box">
 <div class="pos">
 <div class="cen">
-<img src="/mobile/new_m/mcard/images/common/gallery_sample_12.jpg?v=0.0.1" />
+<img src="../assets/invitation/img/snap/snap12.jpeg" />
+</div>
+</div>
+</div>
+</li>
+<li data-thumb="../assets/invitation/img/snap/snap13.jpeg">
+<div class="box">
+<div class="pos">
+<div class="cen">
+<img src="../assets/invitation/img/snap/snap13.jpeg" />
+</div>
+</div>
+</div>
+</li>
+<li data-thumb="../assets/invitation/img/snap/snap14.jpeg">
+<div class="box">
+<div class="pos">
+<div class="cen">
+<img src="../assets/invitation/img/snap/snap14.jpeg" />
+</div>
+</div>
+</div>
+</li>
+<li data-thumb="../assets/invitation/img/snap/snap15.jpeg">
+<div class="box">
+<div class="pos">
+<div class="cen">
+<img src="../assets/invitation/img/snap/snap15.jpeg" />
 </div>
 </div>
 </div>
