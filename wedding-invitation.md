@@ -11,7 +11,7 @@ title: wedding-invitation
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi" />
 <meta name="format-detection" content="telephone=no" />
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/invitation/img/church-1.jpeg"> <!-- Link Image -->
+<meta property="og:image" content="../assets/invitation/img/main.jpeg"> <!-- Link Image -->
 <meta property="og:title" content="성청하♡한유빈의 모바일청첩장"> <!-- Link Title -->
 <meta property="og:description" content="우리 결혼합니다"> <!-- Link Text -->
 <meta property="og:url" content="https://chunghasung.org/wedding-invitation"> <!-- Link URL -->
