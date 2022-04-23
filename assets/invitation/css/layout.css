@@ -293,6 +293,7 @@
 	text-align:center;
 	color:#ba8f58;
 	letter-spacing:0.2em;
+	white-space:pre-wrap;
 }
 .mcard_31 .com-btn.tel.sl{
 	background-color:#a3dad9;
@@ -321,14 +322,14 @@
 .mcard_31 .visual-section .vertical-item.tit{
 	z-index:10;
 	position:absolute;
-	left:50%; top:4.000rem;
+	left:50%; top:3.000rem;
 	width:auto;
 	padding:0.938rem 0.625rem 1.250rem;
 	background:rgba(255, 255, 255, .6);
 	transform:translate(-50%, 0);
 }
 .mcard_31 .visual-section .vertical-item.tit .p1{
-	font-size:0.688rem;
+	font-size:0.8rem;
 	font-weight:500;
 	line-height:0.938rem;
 	color:#7c6a52;
@@ -381,7 +382,8 @@
 	letter-spacing:0.1em;
 }
 .mcard_31 .greeting-section .sec-tit{
-	font-size:0.688rem;
+	position:relative;
+	font-size:0.588rem;
 }
 .mcard_31 .greeting-section .sec-txt{
 	position:relative;

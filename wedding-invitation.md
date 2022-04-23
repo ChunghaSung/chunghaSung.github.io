@@ -58,7 +58,7 @@ title: wedding-invitation
 </p>
 </div>
 <div class="vertical-item photo">
-<img src="../assets/invitation/img/church-1.jpeg" alt="">
+<img src="../assets/invitation/img/main.jpeg" alt="">
 </div>
 <div class="vertical-item info">
 <p class="date">
@@ -74,15 +74,22 @@ title: wedding-invitation
 
 <!--// 인사말 -->
 <section class="greeting-section">
-<div class="sec-tit">" 이제 서로, 평생 함께 "</div>
-<div class="sec-txt">서로가 마주보며 다져온 사랑을
-이제 함께 한 곳을 바라보며
-걸어갈 수 있는 큰 사랑으로
-키우고자 합니다.
-저희 두 사람이 사랑의 이름으로
-지켜나갈 수 있도록
-앞날을 축복해 주시면
-감사하겠습니다.</div>
+<div class="sec-tit">"너의 얼굴을 떠올리면 &#10;
+나의 가슴은 따뜻해지고
+
+너의 목소리 떠올리면
+
+나의 가슴은 즐거워진다
+
+이것이 이 봄에 또 살아갈 이유다."
+
+- 나태주 '살아갈 이유'</div>
+<div class="sec-txt">앞으로 올 여름도, 가을도, 그리고 겨울도
+가족이라는 울타리로 힘이 되어주고
+서로가 서로의 삶의 이유가 되어 함께 
+살아가겠습니다. 부디 참석하시어 
+새롭게 시작될 저희 두 사람의 계절을 
+축복해 주시면 감사하겠습니다.</div>
 <div class="info">
 <div class="ib">
 <div class="tb">
@@ -114,9 +121,7 @@ title: wedding-invitation
 
 <!--// 배너 -->
 <section class="banner-section">
-<div class="tb">
-<p class="txt">소 중 한 &nbsp; 당 신 을 &nbsp; 초 대 합 니 다</p>
-</div>
+<img src="../assets/invitation/img/banner.jpeg" alt="">
 </section>
 <!-- 배너 //-->
 
@@ -701,7 +706,20 @@ function kakaosendLink() {
 <form action="">
 <div class="group col-2 first">
 <div>
-국민은행
+하나은행
+</div>
+<div>
+<span>예금주 : </span> [부]한흥석
+</div>
+</div>
+<div class="group">
+<div>
+<input name="BBankNum1" id="BBankNum1" class="input" readonly value="253-890102-11407"><button type="button" class="btn" onclick="jsCopyLink('25389010211407', 'accountCopyB', '4')">복사</button>
+</div>
+</div>
+<div class="group col-2">
+<div>
+하나은행
 </div>
 <div>
 <span>예금주 : </span> [모]송낭섭
@@ -709,9 +727,9 @@ function kakaosendLink() {
 </div>
 <div class="group">
 <div>
-<input name="BBankNum1" id="BBankNum1" class="input" readonly value="805910-09-973807"><button type="button" class="btn" onclick="jsCopyLink('80591009973807', 'accountCopyB', '3')">복사</button>
+<input name="BBankNum2" id="BBankNum2" class="input" readonly value="805910-09-973807"><button type="button" class="btn" onclick="jsCopyLink('80591009973807', 'accountCopyB', '5')">복사</button>
 </div>
-</div>
+</div>	
 <div class="group col-2">
 <div>
 국민은행
@@ -722,7 +740,7 @@ function kakaosendLink() {
 </div>
 <div class="group">
 <div>
-<input name="BBankNum2" id="BBankNum2" class="input" readonly value="695002-01-219191"><button type="button" class="btn" onclick="jsCopyLink('69500201219191', 'accountCopyB', '4')">복사</button>
+<input name="BBankNum3" id="BBankNum3" class="input" readonly value="695002-01-219191"><button type="button" class="btn" onclick="jsCopyLink('69500201219191', 'accountCopyB', '6')">복사</button>
 </div>
 </div>	
 </form>
@@ -801,7 +819,8 @@ function kakaosendLink() {
 </div>
 </div>
 
-<div class="pop-wrap copyComplete" id="copyComplete3">
+
+<div class="pop-wrap copyComplete" id="copyComplete4">
 <div class="pop-inner">
 <div class="pop-body">
 <div class="form">
@@ -811,13 +830,13 @@ function kakaosendLink() {
 <div>
 <div class="tit">계좌번호가 복사되었습니다.</div>
 <div class="bkinfo">
-<span>국민은행 805910-09-973807</span><br><span>예금주 송낭섭</span>
+<span>하나은행 253-890102-11407</span><br><span>예금주 한흥석</span>
 </div>
 </div>
 </div>
 </div>
 <div class="buttons">	
-<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete3')">확인</a>
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete4')">확인</a>
 </div>
 </form>
 </div>
@@ -825,7 +844,31 @@ function kakaosendLink() {
 </div>
 </div>
 
-<div class="pop-wrap copyComplete" id="copyComplete4">
+<div class="pop-wrap copyComplete" id="copyComplete5">
+<div class="pop-inner">
+<div class="pop-body">
+<div class="form">
+<form action="">
+<div class="con">
+<div class="group">
+<div>
+<div class="tit">계좌번호가 복사되었습니다.</div>
+<div class="bkinfo">
+<span>하나은행 805910-09-973807</span><br><span>예금주 송낭섭</span>
+</div>
+</div>
+</div>
+</div>
+<div class="buttons">	
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete5')">확인</a>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="pop-wrap copyComplete" id="copyComplete6">
 <div class="pop-inner">
 <div class="pop-body">
 <div class="form">
@@ -841,7 +884,7 @@ function kakaosendLink() {
 </div>
 </div>
 <div class="buttons">	
-<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete4')">확인</a>
+<a href="javascript:void(0);" class="btn" onclick="popClose('copyComplete6')">확인</a>
 </div>
 </form>
 </div>
@@ -1114,7 +1157,7 @@ function getDday() {
     var oneDay = 86400000;
     var dday = Math.round(Math.abs(current - weddingDate)/oneDay);
     var hello = document.getElementById("hello");
-    hello.innerHTML = "<p class=\"p1\">\n" + "우리 결혼<br>" + "합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
+    hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
 }
 
 </script>

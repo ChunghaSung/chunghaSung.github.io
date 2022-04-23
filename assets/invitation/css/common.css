@@ -199,10 +199,6 @@ body{background:url("../img/bg_white.jpg") 0 0 repeat-y; background-size:100% au
 	white-space:pre-wrap;
 }
 
-.banner-section{
-	background:url('../img/banner_01.jpg') center center no-repeat;
-	background-size:100% auto;
-}
 .banner-section .txt{
 	display:table-cell;
 	vertical-align:middle;
