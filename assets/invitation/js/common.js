@@ -108,9 +108,8 @@ var popGallerySlider;
 
 function popGallery() { // 팝업갤러리
 	popGallerySlider = $('#pop-gallery').lightSlider({
-		gallery:true,
+		gallery:false,
 		item:1,
-		thumbItem:5,
 		slideMargin: 0,
         freeMove: false,
         enableTouch: false,

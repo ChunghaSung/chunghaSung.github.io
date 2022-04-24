@@ -9,7 +9,7 @@
         slideMove: 1,
         slideMargin: 10,
         addClass: '',
-        mode: 'slide',
+        mode: 'fade',
         useCSS: false,
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
         easing: 'linear', //'for jquery animation',//
