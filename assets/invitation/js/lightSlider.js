@@ -561,30 +561,6 @@
                 var $thumb = $slide.parent().find('.lSPager').find('li');
                 this.active($thumb, true);
             },
-            slide: function () {
-                var $this = this;
-                refresh.calSlide = function () {
-                    if (w > elSize) {
-                        slideValue = $this.slideValue();
-                        $this.active($children, false);
-                        if ((slideValue) > w - elSize - settings.slideMargin) {
-                            slideValue = w - elSize - settings.slideMargin;
-                        } else if (slideValue < 0) {
-                            slideValue = 0;
-                        }
-                        $this.move($el, slideValue);
-                        if (settings.loop === true && settings.mode === 'slide') {
-                            if (scene >= (length - ($el.find('.clone.left').length / settings.slideMove))) {
-                                $this.resetSlide($el.find('.clone.left').length);
-                            }
-                            if (scene === 0) {
-                                $this.resetSlide($slide.find('.lslide').length);
-                            }
-                        }
-                    }
-                };
-                refresh.calSlide();
-            },
             resetSlide: function (s) {
                 var $this = this;
                 $slide.find('.lSAction a').addClass('disabled');
