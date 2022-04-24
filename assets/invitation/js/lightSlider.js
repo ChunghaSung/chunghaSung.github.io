@@ -29,7 +29,7 @@
         verticalHeight: 500,
         vThumbWidth: 100,
         thumbItem: 10,
-        pager: true,
+        pager: false,
         gallery: false,
         galleryMargin: 5,
         thumbMargin: 5,
@@ -444,7 +444,7 @@
                         tP = ((tHT) * 100) / elSize;
                     }
                     ob.css({
-                        'height': tH + 'px',
+                        'height': tH + 'px'
                     });
                 };
                 setCss();
