@@ -104,29 +104,7 @@ function dataPicker(data) { // 달력 출력
 	});
 }
 
-var imgGallerySlider;
 var popGallerySlider;
-function imageGallery() { // 포토갤러리
-	imgGallerySlider = $('#image-gallery').lightSlider({
-		gallery:true,
-		item:1,
-		thumbItem:5,
-		slideMargin: 0,
-        freeMove: true,
-        enableTouch: true,
-        enableDrag: true,
-		speed:500,
-		auto:false,
-		loop:true,
-		//adaptiveHeight:true,
-		onSliderLoad: function() {
-			$('#image-gallery').removeClass('cS-hidden');
-		},
-		onAfterSlide: function(el, index) {
-			popGallerySlider.goToSlide(index);
-		}
-	});
-}
 
 function popGallery() { // 팝업갤러리
 	popGallerySlider = $('#pop-gallery').lightSlider({
@@ -134,8 +112,8 @@ function popGallery() { // 팝업갤러리
 		item:1,
 		thumbItem:5,
 		slideMargin: 0,
-        freeMove: true,
-        enableTouch: true,
+        freeMove: false,
+        enableTouch: false,
         mode:'fade',
         useCss: false,
         enableDrag: false,
@@ -154,35 +132,8 @@ function popGallery() { // 팝업갤러리
 }
 
 function galleryPOP(toggle, type, index) { // 갤러리팝업 열고,닫기
-	if(type === "type1") return galleryType1(toggle);
 	if(type === "type2") return galleryType2(toggle, index);
 	if(type === "type3") return galleryType3(toggle, index);
-}
-
-function galleryType1(toggle){ // 슬라이드형 갤러리
-	var el = $(".gallery-pop-wrap"),
-		sw = $(".lSSlideWrapper");
-
-	if(sw.hasClass('moveOn')) return this;
-
-	if(toggle === "open"){
-		el.css({
-			"opacity": 1,
-			"transform": "translate3d(0,0,0)"
-		});
-		el.find(".pop-body").css({
-			"visibility": "visible"
-		}).delay(500).animate({
-			"opacity" : 1
-		}, 300);
-		scrollFixed();
-	} else if(toggle === "close"){
-		var index = $('#pop-gallery li.active').index();
-		imgGallerySlider.goToSlide(index);
-		el.removeAttr("style");
-		el.find(".pop-body").removeAttr("style");
-		scrollAuto();
-	}
 }
 
 function galleryType2(toggle, index){ // 사각형 갤러리
