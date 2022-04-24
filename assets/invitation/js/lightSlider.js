@@ -10,7 +10,7 @@
         slideMargin: 10,
         addClass: '',
         mode: 'slide',
-        useCSS: true,
+        useCSS: false,
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
         easing: 'linear', //'for jquery animation',//
         speed: 400, //ms'
@@ -34,9 +34,9 @@
         galleryMargin: 5,
         thumbMargin: 5,
         currentPagerPosition: 'middle',
-        enableTouch: true,
-        enableDrag: true,
-        freeMove: true,
+        enableTouch: false,
+        enableDrag: false,
+        freeMove: false,
         swipeThreshold: 40,
         responsive: [],
         /* jshint ignore:start */
@@ -666,94 +666,6 @@
                     });
                 }
             },
-            touchMove: function (endCoords, startCoords) {
-                // swipe 시작할때 moveOn 추가
-                $slide.css('transition-duration', '0ms').addClass('moveOn');
-                if (settings.mode === 'slide') {
-                    var distance = endCoords - startCoords;
-                    var swipeVal = slideValue - distance;
-                    if ((swipeVal) >= w - elSize - settings.slideMargin) {
-                        if (settings.freeMove === false) {
-                            swipeVal = w - elSize - settings.slideMargin;
-                        } else {
-                            var swipeValT = w - elSize - settings.slideMargin;
-                            swipeVal = swipeValT + ((swipeVal - swipeValT) / 5);
-
-                        }
-                    } else if (swipeVal < 0) {
-                        if (settings.freeMove === false) {
-                            swipeVal = 0;
-                        } else {
-                            swipeVal = swipeVal / 5;
-                        }
-                    }
-                    this.move($el, swipeVal);
-                }
-            },
-
-            touchEnd: function (distance) {
-                $slide.css('transition-duration', settings.speed + 'ms');
-                // swipe가 끝나면 moveOn 삭제
-                setTimeout(function(){
-                    $slide.removeClass('moveOn');
-                }, 100);
-                if (settings.mode === 'slide') {
-                    var mxVal = false;
-                    var _next = true;
-                    slideValue = slideValue - distance;
-                    if ((slideValue) > w - elSize - settings.slideMargin) {
-                        slideValue = w - elSize - settings.slideMargin;
-                        if (settings.autoWidth === false) {
-                            mxVal = true;
-                        }
-                    } else if (slideValue < 0) {
-                        slideValue = 0;
-                    }
-                    var gC = function (next) {
-                        var ad = 0;
-                        if (!mxVal) {
-                            if (next) {
-                                ad = 1;
-                            }
-                        }
-                        if (!settings.autoWidth) {
-                            var num = slideValue / ((slideWidth + settings.slideMargin) * settings.slideMove);
-                            scene = parseInt(num) + ad;
-                            if (slideValue >= (w - elSize - settings.slideMargin)) {
-                                if (num % 1 !== 0) {
-                                    scene++;
-                                }
-                            }
-                        } else {
-                            var tW = 0;
-                            for (var i = 0; i < $children.length; i++) {
-                                tW += (parseInt($children.eq(i).width()) + settings.slideMargin);
-                                scene = i + ad;
-                                if (tW >= slideValue) {
-                                    break;
-                                }
-                            }
-                        }
-                    };
-                    if (distance >= settings.swipeThreshold) {
-                        gC(false);
-                        _next = false;
-                    } else if (distance <= -settings.swipeThreshold) {
-                        gC(true);
-                        _next = false;
-                    }
-                    $el.mode(_next);
-                    this.slideThumb();
-                } else {
-                    if (distance >= settings.swipeThreshold) {
-                        $el.goToPrevSlide();
-                    } else if (distance <= -settings.swipeThreshold) {
-                        $el.goToNextSlide();
-                    }
-                }
-            },
-
-
 
             enableDrag: function () {
                 var $this = this;
