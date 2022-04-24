@@ -531,7 +531,7 @@ function kakaosendLink() {
 </div>
 <div class="pop-body">
 <ul id="pop-gallery" class="gallery list-unstyled cS-hidden roll_type01">
-<li data-thumb="../assets/invitation/img/snap/snap1.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -540,7 +540,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap2.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -549,7 +549,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap3.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -558,7 +558,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap4.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -567,7 +567,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap5.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -576,7 +576,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap6.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -585,7 +585,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap7.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -594,7 +594,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap8.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -603,7 +603,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap9.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -612,7 +612,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap10.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -621,7 +621,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap11.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -630,7 +630,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap12.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -639,7 +639,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap13.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -648,7 +648,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap14.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
@@ -657,7 +657,7 @@ function kakaosendLink() {
 </div>
 </div>
 </li>
-<li data-thumb="../assets/invitation/img/snap/snap15.jpeg">
+<li>
 <div class="box">
 <div class="pos">
 <div class="cen">
