@@ -1106,7 +1106,7 @@ body{background:url("../img/bg_white.jpg") 0 0 repeat-y; background-size:100% au
 	.lSAction > a{width:0.750rem; height:1.250rem; background-size:0.250rem auto; margin-top: -0.625rem;}
 	.gallery-pop-wrap .close-btn{width:1.688rem; height:1.625rem; background-size: 0.438rem auto;}
 	/* .gallery-pop-wrap .lSSlideWrapper{height: calc(100% - 3.438rem);} */
-	.gallery-pop-wrap .lSSlideWrapper{height: calc(100% - 0.313rem);}
+	.gallery-pop-wrap .lSSlideWrapper{height: calc(100%);}
 	.gallery-pop-wrap .lSPager{display:none; visibility:hidden;}
 
 	.messageDelete .close-btn{width:1.688rem; height:1.625rem; background-size: 0.438rem auto;}
