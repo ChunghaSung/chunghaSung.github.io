@@ -498,20 +498,13 @@ function kakaosendLink() {
        mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
        webUrl: 'https://chunghasung.org/wedding-invitation',
      }
-   },
-   {
-     title: '앱으로 보기',
-       link: {
-        mobileWebUrl: 'https://chunghasung.org/wedding-invitation',
-        webUrl: 'https://chunghasung.org/wedding-invitation',
-       }
-    }
+   }
   ]
  });
 }
 </script>
 <li>
-<a target=_black href="#" onclick="kakaosendLink();" class="kakao">
+<a target=_black onclick="kakaosendLink();" class="kakao">
 카카오톡<br> 공유하기
 </a>
 </li>
@@ -1181,9 +1174,9 @@ function startup() {
 function getDday() {
     // d-day caculator
     var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
-    var weddingDate = new Date("2022", "5", "24");
+    var weddingDate = new Date("2022", "5", "28");
     var oneDay = 86400000;
-    var dday = Math.round(Math.abs(current - weddingDate)/oneDay);
+    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
     var hello = document.getElementById("hello");
     hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
 }
