@@ -1174,7 +1174,9 @@ function startup() {
 function getDday() {
     // d-day caculator
     var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
-    var weddingDate = new Date("2022", "5", "28");
+    var weddingDate = new Date("2022", "4", "28");
+    console.log(weddingDate);
+    console.log(current);
     var oneDay = 86400000;
     var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
     var hello = document.getElementById("hello");
