@@ -445,7 +445,6 @@
                     }
                     ob.css({
                         'height': tH + 'px',
-                        'padding-bottom': tP + '%'
                     });
                 };
                 setCss();
