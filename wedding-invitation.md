@@ -965,7 +965,7 @@ var contentObj = new Array();
 
 var commentList = document.getElementById("comment-list")
 
-var countPerEachPage = 5;
+var countPerEachPage = 8;
 var countOfPages = 0;
 var presentPage = 1;
 var addPageList = new Array();
