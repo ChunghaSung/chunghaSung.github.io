@@ -3,7 +3,6 @@ layout: wedding2
 title: wedding-invitation
 ---
 
-
 <head>
 
 <meta charset="utf-8">
@@ -1275,4 +1274,3 @@ function addressCopyLink(copyText) {
     //alert("URL 복사가 완료되었습니다."); 					  
 }
 </script>
-
