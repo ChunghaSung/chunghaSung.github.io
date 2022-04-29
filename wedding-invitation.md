@@ -56,6 +56,18 @@ title: wedding-invitation
 ❤<br>
 한유빈
 </p>
+<script>
+function getDday() {
+    // d-day caculator
+    var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
+    var weddingDate = new Date("2022", "4", "28");
+    var oneDay = 86400000;
+    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
+    var hello = document.getElementById("hello");
+    hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
+}
+getDday();
+</script>
 </div>
 <div class="vertical-item photo">
 <img src="../assets/invitation/img/main.jpeg" alt="">
@@ -102,6 +114,7 @@ title: wedding-invitation
 <p class="default">의</p>
 <p class="gwangye">장남</p>
 <p class="slsb">청하</p>
+<p class="default">(안토니오)</p>
 </div>
 <div class="row">
 <p class="honju">
@@ -112,6 +125,7 @@ title: wedding-invitation
 <p class="default">의</p>
 <p class="gwangye">장녀</p>
 <p class="slsb">유빈</p>
+<p class="default">(엘리사벳)</p>
 </div>
 </div>
 </div>
@@ -1167,19 +1181,9 @@ function goPrev() {
 
 window.onload = startup;
 function startup() {
-    getDday();
     loadContents();
 }
 
-function getDday() {
-    // d-day caculator
-    var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
-    var weddingDate = new Date("2022", "4", "28");
-    var oneDay = 86400000;
-    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
-    var hello = document.getElementById("hello");
-    hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
-}
 
 </script>
 
