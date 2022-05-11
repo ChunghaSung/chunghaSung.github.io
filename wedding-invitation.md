@@ -418,7 +418,7 @@ function kakao_navi(){
 
 <dl>
 <dt>기타안내</dt>
-<dd>성당결혼식이라 꽃화환을 받지 않으며, 대신 쌀화환 (축복미)를 보내주시면 불우이웃에게 기증됩니다. <br> *축복미 신청: 02-727-2254 (서울 가톨릭복지회)</dd>
+<dd>성당결혼식이라 꽃화환을 받지 않으며, 대신 쌀화환 (축복미)를 보내주시면 불우이웃에게 기증됩니다. <br> *축복미 신청: 02-727-2254 (서울 가톨릭복지회) 또는 <a style="white-space: nowrap" href="https://www.caritasseoul.or.kr/html/dh/spon06_open" target="_blank">링크 클릭: https://www.caritasseoul.or.kr/html/dh/spon06_open</a></dd>
 </dl>
 </div>
 </div>
