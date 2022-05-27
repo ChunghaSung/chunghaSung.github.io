@@ -61,7 +61,7 @@ function getDday() {
     var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
     var weddingDate = new Date("2022", "4", "28");
     var oneDay = 86400000;
-    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
+    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay) + 1;
     var hello = document.getElementById("hello");
     hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
 }
