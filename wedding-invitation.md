@@ -61,9 +61,15 @@ function getDday() {
     var current = new Date(new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"}));
     var weddingDate = new Date("2022", "4", "28");
     var oneDay = 86400000;
-    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay) + 1;
+    var dday = Math.round(Math.abs(current.getTime() - weddingDate.getTime())/oneDay);
+    var printDday = "";
+    if (dday > 0) {
+        printDday = "+" + dday;
+    } else {
+        printDday = "-" + dday;
+    }
     var hello = document.getElementById("hello");
-    hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D-" + dday + ")</p>" + hello.innerHTML;
+    hello.innerHTML = "<p class=\"p1\">\n" + "우리<br>" + "결혼합니다<br>" + "(D" + printDday + ")</p>" + hello.innerHTML;
 }
 getDday();
 </script>
@@ -974,7 +980,143 @@ var apigClient = apigClientFactory.newClient({
 });
 
 
-var contentObj = new Array();
+var contentObj = [
+  {
+    "name": "베조스",
+    "date": "5/28/2022, 12:32:18 PM",
+    "txt": "Congrats!"
+  },
+  {
+    "name": "서화숙",
+    "date": "5/28/2022, 12:28:42 PM",
+    "txt": "어여쁜 따님의 결혼을 진심으로 축하드립니다♡"
+  },
+  {
+    "name": "남창식 ",
+    "date": "5/28/2022, 8:48:44 AM",
+    "txt": "따님 결혼 축하드립니다"
+  },
+  {
+    "name": "오제선 ",
+    "date": "5/26/2022, 9:31:26 PM",
+    "txt": "예쁜 따님 결혼 진심으로 축하드립니다 "
+  },
+  {
+    "name": "행쇼",
+    "date": "5/5/2022, 10:47:47 AM",
+    "txt": "사랑하는 청하!! 그리고 청하가 사랑하는 유빈님\n사진 속 아름다운 미소 영원히 간직하는 예쁜 사랑하세요!!"
+  },
+  {
+    "name": "조윤서",
+    "date": "5/2/2022, 8:25:42 AM",
+    "txt": "두분 결혼 축하드립니다~ 유빈아 누구보다 행복해야 돼~~😉😉😉"
+  },
+  {
+    "name": "찌혜",
+    "date": "5/1/2022, 11:39:28 PM",
+    "txt": "유비뇽~~연예인이야??넘이쁘당ㅜㅜ 행복하게 잘 살아야되!!! 유비니 행복하게 해주세요~축하드려용ㅎㅎ"
+  },
+  {
+    "name": "이세환",
+    "date": "5/1/2022, 6:11:47 PM",
+    "txt": "청하 너무너무 축하한다\n둘이 너무 잘어울리네~"
+  },
+  {
+    "name": "ㅠㅠ",
+    "date": "5/1/2022, 6:01:25 PM",
+    "txt": "오빠 행복해야해요!!"
+  },
+  {
+    "name": "엄마친구 진온미예요",
+    "date": "5/1/2022, 12:49:54 PM",
+    "txt": "아름다운5월의 신부네요! 정말 아름답고 이뻐요.행복한 결혼식과 앞날에 늘 축복이 가득하길 기도드려요!~♡"
+  },
+  {
+    "name": "손영훈",
+    "date": "4/28/2022, 1:34:03 PM",
+    "txt": "우리청하가 결혼이라뉘 ㅋㅋㅋㅋ 정말축하한다 행복하게 잘살어"
+  },
+  {
+    "name": "Jingjingjing",
+    "date": "4/26/2022, 8:20:01 AM",
+    "txt": "Hey dude, I'm truly happy for you although I cannot come to your wedding! Wishing you a glorious ceremony with an abundance of wonderful memories to follow! Congratulations to you both for finding your life partners on this happy day.  "
+  },
+  {
+    "name": "박상권",
+    "date": "4/25/2022, 1:17:17 PM",
+    "txt": "청하야 결혼 축하한다. 앞으로 행복하게 살아라."
+  },
+  {
+    "name": "강현우",
+    "date": "4/25/2022, 2:47:50 AM",
+    "txt": "청하를 거두어 주셔서 감사합니다. 행복한 삶을 응원해요.  "
+  },
+  {
+    "name": "이헌중",
+    "date": "4/25/2022, 12:43:56 AM",
+    "txt": "청하야, 두 사람의 새출발을 진심으로 응원한다. 인생의 기쁨을 함께 나누며 행복하길!"
+  },
+  {
+    "name": "YN",
+    "date": "4/24/2022, 4:41:02 PM",
+    "txt": "결혼 축하합니다! 사진 너무 멋져요 항상 행복한 일들로 가득하길 바래요 ♥ "
+  },
+  {
+    "name": "이동호",
+    "date": "4/24/2022, 3:44:16 PM",
+    "txt": "형 결혼 축하드립니다!! 두분 항상 건강하시고 행복하세요!! 결혼식 때 뵙겠습니다ㅎㅎ"
+  },
+  {
+    "name": "You",
+    "date": "4/24/2022, 3:42:18 PM",
+    "txt": "Finally! "
+  },
+  {
+    "name": "조 바이든",
+    "date": "4/24/2022, 2:39:28 PM",
+    "txt": "성청하군 결혼 축하하네 후후후"
+  },
+  {
+    "name": "김승모",
+    "date": "4/24/2022, 1:31:14 PM",
+    "txt": "제수씨, 우리 청하 거두어 주셔서 감사합니다. 두 분 함께 만드실 인생에 늘 성공이 함께하길 기원합니다. 행복하세요!"
+  },
+  {
+    "name": "청친",
+    "date": "4/24/2022, 12:41:06 PM",
+    "txt": "이게 결혼사진이냐 화보냐 클라스 지렸다"
+  },
+  {
+    "name": "용",
+    "date": "4/24/2022, 12:40:33 PM",
+    "txt": "청하랑 유빈이 너무너무 잘 어울리네!! 행복해랏!!"
+  },
+  {
+    "name": "성민철",
+    "date": "4/24/2022, 12:38:31 PM",
+    "txt": "너무 잘 어울리는 커플이네요. 결혼 잘 하시고 건강하게 행복하세요. 축하합니다!"
+  },
+  {
+    "name": "삭구",
+    "date": "4/24/2022, 12:28:15 PM",
+    "txt": "청하는 이쁘고 착한 유빈이 잘 모시고 살아라! 축하해!!"
+  },
+  {
+    "name": "ㅋㅣ야",
+    "date": "4/24/2022, 7:23:11 AM",
+    "txt": "사진 멋있다!!! "
+  },
+  {
+    "name": "찡",
+    "date": "4/18/2022, 2:05:51 PM",
+    "txt": "노래 청첩장이랑 너무 잘 어울려~~ 유빈아 축하해!!"
+  },
+  {
+    "name": "청하친구",
+    "date": "4/18/2022, 1:32:49 PM",
+    "txt": "결혼 축하해! 결혼식 때 보자! ㅎㅎ"
+  }
+];
 
 var commentList = document.getElementById("comment-list")
 
@@ -993,112 +1135,28 @@ function setupDeleteId(n, d) {
 }
 
 function deleteComment() {
-    var pass = document.getElementById("deleteCom").value;
-
-    var tmp = {
-        Date: { S: deleteDate},
-        Name: { S: deleteName},
-        Pasword: {S: pass}
-    }
-
-    var hash = objectHash.sha1(tmp);
-
-    var body = {
-        "command": "DELETE",
-        "hash": hash,
-        "date": deleteDate
-    };
-    apigClient.invitationPut({}, body, {})
-    .then(function(result) {
-        console.log(result);
-        if (jQuery.isEmptyObject(result.data)) {
-            alert("비밀번호가 일치하지 않습니다.");
-        } else {
-            console.log("Delete Item successfully!");
-            popClose('messageDelete');
-            loadContents();
-        }
-        // clear password form
-        document.getElementById("deleteCom").value = "";
-    }).catch(function(result) {
-        //console.log(result);
-        console.log("delete fail");
-    });
+    alert("No longer available");
+    loadContents();
 }
 
 
 function loadContents() {
-    var body = {
-        "command": "GET"
-    };
 
-    apigClient.invitationPut({}, body, {})
-    .then(function(result) {
-        console.log("Get Item successfully!");
-        contentObj = new Array();
-        result.data.forEach(ele => 
-            contentObj.push({
-                name: ele["name"],
-                date: ele["date"],
-                txt: ele["txt"]
-            })
-        );
-        countOfPages = getCountOfPages();
-        if (presentPage > countOfPages) {
-            presentPage = countOfPages;
-        }
-        loadMyPaginationList();
-        // clear the form
-        document.getElementById("commentName").value = "";
-        document.getElementById("commentPass").value = "";
-        document.getElementById("commentContents").value = "";
-    }).catch(function(result) {
-        console.error("Get Item Error JSON:", JSON.stringify(result, null, 2));
-    });
-
+    countOfPages = getCountOfPages();
+    if (presentPage > countOfPages) {
+        presentPage = countOfPages;
+    }
+    loadMyPaginationList();
+    // clear the form
+    document.getElementById("commentName").value = "";
+    document.getElementById("commentPass").value = "";
+    document.getElementById("commentContents").value = "";
 }
 
 function putContents() {
-
-    // get current date
-    var current = new Date().toLocaleString('en-US', {timeZone:"Asia/Seoul"})
-
-    // get data
-    var name = document.getElementById("commentName").value
-    var pass = document.getElementById("commentPass").value
-    var contents = document.getElementById("commentContents").value
-
-    if (name == "" || pass == "" || contents == "") {
-        alert("이름, 비밀번호, 내용을 입력해주세요.");
-        return;
-    }
-
-    var tmp = {
-        Date: { S: current},
-        Name: { S: name},
-        Pasword: {S: pass}
-    }
-
-    var hash = objectHash.sha1(tmp);
-
-    var body = {
-        "command": "PUT",
-        "hash": hash,
-        "name": name,
-        "date": current,
-        "txt": contents
-    };
-
-    apigClient.invitationPut({}, body, {})
-    .then(function(result) {
-        console.log(result);
-        console.log("Put Item successfully!");
-        presentPage = 1;
-        loadContents();
-        popOpen('0 1rem', 'register');
-    }).catch(function(result) {
-        console.error("Put Item Error JSON:", JSON.stringify(result, null, 2));
-    });
+    alert("No longer available");
+    presentPage = 1;
+    loadContents();
 }
 
 //function for creating how many how many number per each page
